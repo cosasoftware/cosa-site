@@ -46,7 +46,7 @@ function Banner() {
   return (
     <section className="mt-[18px] w-full">
       <div className="w-full bg-white flex items-center justify-center">
-        <img src="/art/crescent.jpg" alt="Ascension banner" className="w-full max-h-[520px] object-contain" />
+        <img src="/art/01.jpg" alt="Ascension banner" className="w-full max-h-[520px] object-contain" />
       </div>
     </section>
   );

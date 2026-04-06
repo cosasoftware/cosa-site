@@ -1,6 +1,6 @@
 import React from "react";
 
-/** Ascension — Apple-clean hero + screens (auto gallery) + CTA */
+/** Emergence — Cosa Software */
 export default function App() {
   return (
     <main className="min-h-screen bg-white text-neutral-900 selection:bg-neutral-900 selection:text-white">
@@ -25,8 +25,9 @@ function Header() {
           <div className="font-medium tracking-tight">Emergence</div>
         </div>
         <nav className="hidden md:flex items-center gap-8 text-sm text-neutral-600">
-          <a href="#screens" className="hover:text-neutral-900">Screens</a>
-          <a href="#demo" className="hover:text-neutral-900">Demo</a>
+          <a href="#screens" className="hover:text-neutral-900">Platform</a>
+          <a href="/executive-briefing.html" className="hover:text-neutral-900">Executive Brief</a>
+          <a href="#demo" className="hover:text-neutral-900">Get in touch</a>
         </nav>
       </div>
       <div className="h-px bg-neutral-200" />
@@ -37,8 +38,8 @@ function Header() {
 function Intro() {
   return (
     <section className="mx-auto max-w-6xl px-6 pt-[25px] pb-0 text-center">
-      <h1 className="text-5xl md:text-7xl font-semibold tracking-tight">Ascension</h1>
-      <p className="mt-2 text-xl md:text-2xl text-neutral-700">Evolutinary Prcess Intelligence</p>
+      <h1 className="text-5xl md:text-7xl font-semibold tracking-tight">Emergence</h1>
+      <p className="mt-2 text-xl md:text-2xl text-neutral-700">Process Intelligence Platform</p>
     </section>
   );
 }
@@ -47,7 +48,7 @@ function Banner() {
   return (
     <section className="mt-[18px] w-full">
       <div className="w-full bg-white flex items-center justify-center">
-        <img src="/art/crescent.jpg" alt="Ascension banner" className="w-full max-h-[520px] object-contain" />
+        <img src="/art/01.png" alt="Emergence platform — multi-role enterprise dashboard" className="w-full max-h-[520px] object-contain" />
       </div>
     </section>
   );
@@ -56,17 +57,100 @@ function Banner() {
 function BelowBanner() {
   return (
     <section className="mx-auto max-w-6xl px-6 pt-[18px] pb-10 text-center">
-      <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">Learn once.</h2>
-      <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mt-1">Work everywhere.</h2>
+      <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">Any domain.</h2>
+      <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mt-1">One engine.</h2>
       <p className="mt-3 text-lg text-neutral-700">
-        Imagine your company feeling like a smart phone with a touch screen—simple, elegant, fast, familiar.
+        Domain-specific applications are not developed — they emerge from pure JSON schemas.
       </p>
     </section>
   );
 }
-/* ----------------------- Screens with Galleries + Lightbox ----------------------- */
 
-type Gallery = { title: string; images: string[] };
+function BriefingCard() {
+  return (
+    <section className="mx-auto max-w-6xl px-6 py-10">
+      <a href="/executive-briefing.html" style={{ textDecoration: "none", display: "block" }}>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr auto",
+            alignItems: "center",
+            gap: "40px",
+            background: "#1a1917",
+            borderRadius: "4px",
+            padding: "52px 60px",
+            cursor: "pointer",
+            transition: "opacity 0.2s",
+          }}
+          onMouseEnter={e => (e.currentTarget.style.opacity = "0.93")}
+          onMouseLeave={e => (e.currentTarget.style.opacity = "1")}
+        >
+          <div>
+            <div style={{
+              fontFamily: "monospace",
+              fontSize: "10px",
+              fontWeight: 400,
+              letterSpacing: "0.18em",
+              textTransform: "uppercase" as const,
+              color: "rgba(255,255,255,0.35)",
+              marginBottom: "18px",
+            }}>
+              Cosa Software · Strategic Overview
+            </div>
+            <h2 style={{
+              fontFamily: "Georgia, serif",
+              fontSize: "clamp(28px, 4vw, 52px)",
+              fontWeight: 400,
+              lineHeight: 1.05,
+              letterSpacing: "-0.02em",
+              color: "#ffffff",
+              margin: "0 0 20px",
+            }}>
+              Executive Briefing
+            </h2>
+            <p style={{
+              fontFamily: "Georgia, serif",
+              fontStyle: "italic",
+              fontSize: "clamp(16px, 1.8vw, 22px)",
+              fontWeight: 400,
+              color: "rgba(255,255,255,0.55)",
+              lineHeight: 1.55,
+              margin: "0 0 32px",
+              maxWidth: "560px",
+            }}>
+              "Domain-specific applications are not developed —
+              they emerge from pure JSON schemas."
+            </p>
+            <div style={{
+              color: "rgba(255,255,255,0.5)",
+              fontSize: "14px",
+              fontWeight: 400,
+              letterSpacing: "0.02em",
+            }}>
+              Platform architecture · AI integration · The moat · Governed agents
+            </div>
+          </div>
+          <div style={{
+            width: "56px",
+            height: "56px",
+            borderRadius: "50%",
+            border: "1px solid rgba(255,255,255,0.2)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "#ffffff",
+            fontSize: "22px",
+            flexShrink: 0,
+          }}>
+            →
+          </div>
+        </div>
+      </a>
+    </section>
+  );
+}
+
+/* ----------------------- Screens with Galleries + Lightbox ----------------------- */
 
 function Screens() {
   const [data, setData] = React.useState<{
@@ -164,11 +248,11 @@ function CTA() {
       <div className="rounded-3xl border border-neutral-300 bg-white pt-[21px] pb-[21px] px-[42px] md:pt-[29px] md:pb-[29px] md:px-[58px] text-center">
         <h3 className="text-2xl md:text-3xl font-semibold tracking-tight">See it in your domain.</h3>
         <p className="mt-3 text-neutral-600 max-w-xl mx-auto text-sm">
-          Bring your process. We’ll map it to one flow and hand you a demo you can reopen in a year—prompts, params, seeds, provenance, and OTIO.
+          Bring your process. We'll map it to one flow and hand you a demo you can reopen in a year — prompts, params, seeds, provenance, and full history.
         </p>
         <div className="mt-6 flex items-center justify-center gap-3">
-          <a href="mailto:hello@yourdomain.com" className="rounded-full bg-[#0071e3] text-white px-6 py-3 text-sm font-semibold hover:bg-[#147ce5]">Request a private demo</a>
-          <a href="#" className="rounded-full border border-neutral-300 px-6 py-3 text-sm font-semibold text-neutral-900 hover:bg-neutral-50">Download overview</a>
+          <a href="mailto:hello@cosa-software.com" className="rounded-full bg-neutral-900 text-white px-6 py-3 text-sm font-semibold hover:bg-neutral-700">Request a private demo</a>
+          <a href="/executive-briefing.html" className="rounded-full border border-neutral-300 px-6 py-3 text-sm font-semibold text-neutral-900 hover:bg-neutral-50">Read the brief</a>
         </div>
       </div>
     </section>
@@ -180,112 +264,9 @@ function Footer() {
     <footer className="mx-auto max-w-6xl px-6 pb-14 text-xs text-neutral-500">
       <div className="h-px bg-neutral-200 mb-6" />
       <div className="flex items-center justify-between">
-        <span>Copyright © 2025 Cosa Software. All rights reserved.</span>
-        <span>Simple laws. Cinematic clarity.</span>
+        <span>© 2025 Cosa Software. All rights reserved.</span>
+        <span>Seattle, WA</span>
       </div>
     </footer>
   );
 }
-
-/* ─── Drop this function into App.tsx ───────────────────────────────────────
-   1. Add <BriefingCard /> between <BelowBanner /> and <Screens /> in the
-      main App() return block.
-   2. Paste the BriefingCard function below into the file.
-   ─────────────────────────────────────────────────────────────────────────── */
-
-function BriefingCard() {
-  return (
-    <section className="mx-auto max-w-6xl px-6 py-10">
-      <a
-        href="/executive-briefing.html"
-        style={{ textDecoration: "none", display: "block" }}
-      >
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "1fr auto",
-          alignItems: "center",
-          gap: "40px",
-          background: "#1a1917",
-          borderRadius: "4px",
-          padding: "52px 60px",
-          cursor: "pointer",
-          transition: "opacity 0.2s",
-        }}
-          onMouseEnter={e => (e.currentTarget.style.opacity = "0.93")}
-          onMouseLeave={e => (e.currentTarget.style.opacity = "1")}
-        >
-          {/* Left — text */}
-          <div>
-            <div style={{
-              fontFamily: "'DM Mono', monospace",
-              fontSize: "10px",
-              fontWeight: 400,
-              letterSpacing: "0.18em",
-              textTransform: "uppercase",
-              color: "rgba(255,255,255,0.35)",
-              marginBottom: "18px",
-            }}>
-              Cosa Software · Strategic Overview
-            </div>
-
-            <h2 style={{
-              fontFamily: "'Playfair Display', Georgia, serif",
-              fontSize: "clamp(28px, 4vw, 52px)",
-              fontWeight: 400,
-              lineHeight: 1.05,
-              letterSpacing: "-0.02em",
-              color: "#ffffff",
-              margin: "0 0 20px",
-            }}>
-              Executive Briefing
-            </h2>
-
-            <p style={{
-              fontFamily: "'Playfair Display', Georgia, serif",
-              fontStyle: "italic",
-              fontSize: "clamp(16px, 1.8vw, 22px)",
-              fontWeight: 400,
-              color: "rgba(255,255,255,0.55)",
-              lineHeight: 1.55,
-              margin: "0 0 32px",
-              maxWidth: "560px",
-            }}>
-              "Domain-specific applications are not developed —
-              they emerge from pure JSON schemas."
-            </p>
-
-            <div style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "10px",
-              color: "rgba(255,255,255,0.5)",
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: "14px",
-              fontWeight: 400,
-              letterSpacing: "0.02em",
-            }}>
-              <span>Platform architecture · AI integration · The moat · Governed agents</span>
-            </div>
-          </div>
-
-          {/* Right — arrow */}
-          <div style={{
-            width: "56px",
-            height: "56px",
-            borderRadius: "50%",
-            border: "1px solid rgba(255,255,255,0.2)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "#ffffff",
-            fontSize: "22px",
-            flexShrink: 0,
-          }}>
-            →
-          </div>
-        </div>
-      </a>
-    </section>
-  );
-}
-

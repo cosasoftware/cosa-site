@@ -8,6 +8,7 @@ export default function App() {
       <Intro />
       <Banner />
       <BelowBanner />
+      <BriefingCard />
       <Screens />
       <CTA />
       <Footer />
@@ -185,3 +186,106 @@ function Footer() {
     </footer>
   );
 }
+
+/* ─── Drop this function into App.tsx ───────────────────────────────────────
+   1. Add <BriefingCard /> between <BelowBanner /> and <Screens /> in the
+      main App() return block.
+   2. Paste the BriefingCard function below into the file.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+function BriefingCard() {
+  return (
+    <section className="mx-auto max-w-6xl px-6 py-10">
+      <a
+        href="/executive-briefing.html"
+        style={{ textDecoration: "none", display: "block" }}
+      >
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "1fr auto",
+          alignItems: "center",
+          gap: "40px",
+          background: "#1a1917",
+          borderRadius: "4px",
+          padding: "52px 60px",
+          cursor: "pointer",
+          transition: "opacity 0.2s",
+        }}
+          onMouseEnter={e => (e.currentTarget.style.opacity = "0.93")}
+          onMouseLeave={e => (e.currentTarget.style.opacity = "1")}
+        >
+          {/* Left — text */}
+          <div>
+            <div style={{
+              fontFamily: "'DM Mono', monospace",
+              fontSize: "10px",
+              fontWeight: 400,
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+              color: "rgba(255,255,255,0.35)",
+              marginBottom: "18px",
+            }}>
+              Cosa Software · Strategic Overview
+            </div>
+
+            <h2 style={{
+              fontFamily: "'Playfair Display', Georgia, serif",
+              fontSize: "clamp(28px, 4vw, 52px)",
+              fontWeight: 400,
+              lineHeight: 1.05,
+              letterSpacing: "-0.02em",
+              color: "#ffffff",
+              margin: "0 0 20px",
+            }}>
+              Executive Briefing
+            </h2>
+
+            <p style={{
+              fontFamily: "'Playfair Display', Georgia, serif",
+              fontStyle: "italic",
+              fontSize: "clamp(16px, 1.8vw, 22px)",
+              fontWeight: 400,
+              color: "rgba(255,255,255,0.55)",
+              lineHeight: 1.55,
+              margin: "0 0 32px",
+              maxWidth: "560px",
+            }}>
+              "Domain-specific applications are not developed —
+              they emerge from pure JSON schemas."
+            </p>
+
+            <div style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "10px",
+              color: "rgba(255,255,255,0.5)",
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: "14px",
+              fontWeight: 400,
+              letterSpacing: "0.02em",
+            }}>
+              <span>Platform architecture · AI integration · The moat · Governed agents</span>
+            </div>
+          </div>
+
+          {/* Right — arrow */}
+          <div style={{
+            width: "56px",
+            height: "56px",
+            borderRadius: "50%",
+            border: "1px solid rgba(255,255,255,0.2)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "#ffffff",
+            fontSize: "22px",
+            flexShrink: 0,
+          }}>
+            →
+          </div>
+        </div>
+      </a>
+    </section>
+  );
+}
+

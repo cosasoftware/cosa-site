@@ -10,7 +10,6 @@ export default function App() {
       <BelowBanner />
       <BriefingCard />
       <Screens />
-      <CTA />
       <Footer />
     </main>
   );
@@ -37,7 +36,7 @@ function Header() {
 function Intro() {
   return (
     <section className="mx-auto max-w-6xl px-6 pt-[25px] pb-0 text-center">
-      <h1 className="text-5xl md:text-7xl font-semibold tracking-tight">Ascension</h1>
+      <h1 className="text-5xl md:text-7xl font-semibold tracking-tight">Emergence</h1>
       <p className="mt-2 text-xl md:text-2xl text-neutral-700">Evolutionary Process Intelligence - Driven by AI</p>
     </section>
   );
@@ -56,10 +55,10 @@ function Banner() {
 function BelowBanner() {
   return (
     <section className="mx-auto max-w-6xl px-6 pt-[18px] pb-10 text-center">
-      <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">Learn once.</h2>
-      <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mt-1">Work everywhere.</h2>
+      <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">No domain-specific code.</h2>
+      <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mt-1">No implementation cycle.</h2>
       <p className="mt-3 text-lg text-neutral-700">
-        Imagine your company feeling like a smart phone with a touch screen—simple, elegant, fast, familiar.
+        Just systems — generated, governed, and evolved in real time powered by AI.
       </p>
     </section>
   );
@@ -175,7 +174,7 @@ function Screens() {
   if (!data) {
     return (
       <section id="screens" className="mx-auto max-w-6xl px-6 pt-0 pb-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Screens that sell themselves.</h2>
+        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">The domain changes. The process intelligence doesn’t.</h2>
         <p className="mt-3 text-neutral-600 max-w-2xl mx-auto">Across teams, across companies, across the world</p>
         <p className="mt-10 text-sm text-neutral-500">Loading…</p>
       </section>
@@ -189,7 +188,8 @@ function Screens() {
   return (
     <section id="screens" className="mx-auto max-w-6xl px-6 pt-0 pb-4">
       <div className="text-center">
-        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Screens that sell themselves.</h2>
+        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">The domain changes.</h2>
+        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">The process intelligence only evolves.</h2>
         <p className="mt-3 text-neutral-600 max-w-2xl mx-auto">Across teams, across companies, across the world</p>
       </div>
 
@@ -265,8 +265,8 @@ function Footer() {
     <footer className="mx-auto max-w-6xl px-6 pb-14 text-xs text-neutral-500">
       <div className="h-px bg-neutral-200 mb-6" />
       <div className="flex items-center justify-between">
-        <span>Copyright © 2025 Cosa Software. All rights reserved.</span>
-        <span>Simple laws. Cinematic clarity.</span>
+        <span>Copyright © 2026 Cosa Software. All rights reserved.</span>
+        <span>Apps that evolve. For teams that Evolve.</span>
       </div>
     </footer>
   );

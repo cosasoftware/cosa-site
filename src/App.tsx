@@ -38,7 +38,7 @@ function Intro() {
   return (
     <section className="mx-auto max-w-6xl px-6 pt-[25px] pb-0 text-center">
       <h1 className="text-5xl md:text-7xl font-semibold tracking-tight">Ascension</h1>
-      <p className="mt-2 text-xl md:text-2xl text-neutral-700">Evolutionary Process Intelligence</p>
+      <p className="mt-2 text-xl md:text-2xl text-neutral-700">Evolutionary Process Intelligence - Driven by AI</p>
     </section>
   );
 }

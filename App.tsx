@@ -22,7 +22,7 @@ function Header() {
       <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <img src="/logo/cosa-mark.svg" alt="Cosa" className="h-6 w-6" />
-          <div className="font-medium tracking-tight">Ascension</div>
+          <div className="font-medium tracking-tight">Emergence</div>
         </div>
         <nav className="hidden md:flex items-center gap-8 text-sm text-neutral-600">
           <a href="#screens" className="hover:text-neutral-900">Screens</a>
@@ -38,7 +38,7 @@ function Intro() {
   return (
     <section className="mx-auto max-w-6xl px-6 pt-[25px] pb-0 text-center">
       <h1 className="text-5xl md:text-7xl font-semibold tracking-tight">Ascension</h1>
-      <p className="mt-2 text-xl md:text-2xl text-neutral-700">Accelerated Productivity</p>
+      <p className="mt-2 text-xl md:text-2xl text-neutral-700">Evolutinary Prcess Intelligence</p>
     </section>
   );
 }

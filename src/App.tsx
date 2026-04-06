@@ -51,7 +51,7 @@ function Header() {
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <div className="flex items-center gap-3">
-          <img src="/logo/cosa-mark.svg" alt="Cosa" className="h-6 w-6" />
+          <img src="/logo/cosa-mark.png" alt="Cosa" className="h-10 w-10" />
           <div className="font-medium tracking-tight">Emergence</div>
         </div>
 
@@ -470,7 +470,7 @@ function CreativeHeader() {
     <header className="sticky top-0 z-50 bg-neutral-950/85 backdrop-blur supports-[backdrop-filter]:bg-neutral-950/70">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="/#/" className="flex items-center gap-3 no-underline">
-          <img src="/logo/cosa-mark.svg" alt="Cosa" className="h-6 w-6" />
+          <img src="/logo/cosa-mark.png" alt="Cosa" className="h-10 w-10" />
           <div className="font-medium tracking-tight text-white">Emergence</div>
         </a>
 

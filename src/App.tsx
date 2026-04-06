@@ -8,6 +8,7 @@ export default function App() {
       <Intro />
       <Banner />
       <BelowBanner />
+      <BriefingCard />
       <Screens />
       <CTA />
       <Footer />
@@ -63,6 +64,91 @@ function BelowBanner() {
     </section>
   );
 }
+
+function BriefingCard() {
+  return (
+    <section className="mx-auto max-w-6xl px-6 py-10">
+      <a href="/executive-briefing.html" style={{ textDecoration: "none", display: "block" }}>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr auto",
+            alignItems: "center",
+            gap: "40px",
+            background: "#1a1917",
+            borderRadius: "4px",
+            padding: "52px 60px",
+            cursor: "pointer",
+            transition: "opacity 0.2s",
+          }}
+          onMouseEnter={e => (e.currentTarget.style.opacity = "0.93")}
+          onMouseLeave={e => (e.currentTarget.style.opacity = "1")}
+        >
+          <div>
+            <div style={{
+              fontFamily: "monospace",
+              fontSize: "10px",
+              fontWeight: 400,
+              letterSpacing: "0.18em",
+              textTransform: "uppercase" as const,
+              color: "rgba(255,255,255,0.35)",
+              marginBottom: "18px",
+            }}>
+              Cosa Software · Strategic Overview
+            </div>
+            <h2 style={{
+              fontFamily: "Georgia, serif",
+              fontSize: "clamp(28px, 4vw, 52px)",
+              fontWeight: 400,
+              lineHeight: 1.05,
+              letterSpacing: "-0.02em",
+              color: "#ffffff",
+              margin: "0 0 20px",
+            }}>
+              Executive Briefing
+            </h2>
+            <p style={{
+              fontFamily: "Georgia, serif",
+              fontStyle: "italic",
+              fontSize: "clamp(16px, 1.8vw, 22px)",
+              fontWeight: 400,
+              color: "rgba(255,255,255,0.55)",
+              lineHeight: 1.55,
+              margin: "0 0 32px",
+              maxWidth: "560px",
+            }}>
+              "Domain-specific applications are not developed —
+              they emerge from pure JSON schemas."
+            </p>
+            <div style={{
+              color: "rgba(255,255,255,0.5)",
+              fontSize: "14px",
+              fontWeight: 400,
+              letterSpacing: "0.02em",
+            }}>
+              Platform architecture · AI integration · The moat · Governed agents
+            </div>
+          </div>
+          <div style={{
+            width: "56px",
+            height: "56px",
+            borderRadius: "50%",
+            border: "1px solid rgba(255,255,255,0.2)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "#ffffff",
+            fontSize: "22px",
+            flexShrink: 0,
+          }}>
+            →
+          </div>
+        </div>
+      </a>
+    </section>
+  );
+}
+
 /* ----------------------- Screens with Galleries + Lightbox ----------------------- */
 
 type Gallery = { title: string; images: string[] };
@@ -163,11 +249,11 @@ function CTA() {
       <div className="rounded-3xl border border-neutral-300 bg-white pt-[21px] pb-[21px] px-[42px] md:pt-[29px] md:pb-[29px] md:px-[58px] text-center">
         <h3 className="text-2xl md:text-3xl font-semibold tracking-tight">See it in your domain.</h3>
         <p className="mt-3 text-neutral-600 max-w-xl mx-auto text-sm">
-          Bring your process. We’ll map it to one flow and hand you a demo you can reopen in a year—prompts, params, seeds, provenance, and OTIO.
+          Bring your process. We'll map it to one flow and hand you a demo you can reopen in a year—prompts, params, seeds, provenance, and OTIO.
         </p>
         <div className="mt-6 flex items-center justify-center gap-3">
           <a href="mailto:hello@yourdomain.com" className="rounded-full bg-[#0071e3] text-white px-6 py-3 text-sm font-semibold hover:bg-[#147ce5]">Request a private demo</a>
-          <a href="#" className="rounded-full border border-neutral-300 px-6 py-3 text-sm font-semibold text-neutral-900 hover:bg-neutral-50">Download overview</a>
+          <a href="/executive-briefing.html" className="rounded-full border border-neutral-300 px-6 py-3 text-sm font-semibold text-neutral-900 hover:bg-neutral-50">Read the brief</a>
         </div>
       </div>
     </section>

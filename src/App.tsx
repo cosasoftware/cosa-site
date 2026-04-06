@@ -643,14 +643,21 @@ function SystemProof() {
           </h2>
         </div>
 
-        <div className="overflow-hidden rounded-[24px] border border-white/10 bg-black/30 shadow-2xl">
+        <div className="overflow-hidden">
           <img
             src="/creative/storyteller-ui.jpg"
             alt="StoryTeller interface"
             className="w-full object-cover"
           />
         </div>
-      </section>
+        <div className="overflow-hidden">
+          <img
+            src="/creative/storyteller-ui.jpg"
+            alt="StoryTeller interface"
+            className="w-full object-cover"
+          />
+        </div>
+     </section>
     </FadeInSection>
   );
 }

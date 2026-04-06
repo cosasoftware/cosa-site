@@ -210,8 +210,7 @@ function CreativeCard() {
               className="mb-7 max-w-[620px] text-[clamp(18px,1.9vw,25px)] font-normal italic leading-[1.5] text-white/60"
               style={{ fontFamily: "Georgia, serif" }}
             >
-              Story, scene, wardrobe, and character development —
-              generated and evolved inside the process.
+              Story, scene, wardrobe, and character development — inside of governed process flow.
             </p>
 
             <div className="text-sm tracking-[0.02em] text-white/45">
@@ -550,13 +549,12 @@ function HeroCreature() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/70" />
         <div className="absolute bottom-0 left-0 right-0 px-6 pb-10 md:px-10 md:pb-14">
           <div className="mx-auto max-w-6xl">
-            <p className="text-[10px] uppercase tracking-[0.24em] text-white/55 md:text-xs">
+            <p className="text-[10px] text-2xl uppercase tracking-[0.24em] text-white/55 text-7xl ">
               Creative Development
             </p>
-            <h1 className="mt-3 max-w-4xl text-4xl font-semibold tracking-tight md:text-6xl">
-              Story, scene, wardrobe, and character development — generated and
-              evolved inside the process.
-            </h1>
+            <h1 className="mt-3 max-w-4xl text-4xl font-bold tracking-tight md:text-6xl">
+           Story, scene, wardrobe, and character development — inside of governed process flow.
+                </h1>
           </div>
         </div>
       </section>
@@ -652,7 +650,7 @@ function SystemProof() {
         </div>
         <div className="overflow-hidden">
           <img
-            src="/creative/storyteller-ui.jpg"
+            src="/creative/storyteller-ui2.jpg"
             alt="StoryTeller interface"
             className="w-full object-cover"
           />
@@ -665,7 +663,7 @@ function SystemProof() {
 function NarrativeBlock() {
   return (
     <FadeInSection className="px-6 py-8 md:px-10 md:py-12">
-      <section className="mx-auto max-w-4xl text-center">
+      <section className="mx-auto text-center">
         <p className="text-lg leading-relaxed text-white/70 md:text-xl">
           Consider a technical director overseeing a complex production —
           writers, concept artists, animators, directors, and casting teams

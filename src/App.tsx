@@ -51,8 +51,8 @@ function Header() {
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <div className="flex items-center gap-3">
-          <img src="/logo/cosa-mark.png" alt="Cosa" className="h-10 w-10" />
-          <div className="font-medium tracking-tight">Emergence</div>
+          <img src="/logo/cosa-mark.png" alt="Cosa" className="h-8 w-8" />
+          <div className="font-bold tracking-tight">Cosa Software</div>
         </div>
 
         <nav className="hidden items-center gap-8 text-sm text-neutral-600 md:flex">

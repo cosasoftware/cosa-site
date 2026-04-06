@@ -335,15 +335,6 @@ function Screens() {
         })}
       </div>
 
-      <div className="mx-auto mt-14 max-w-3xl text-center">
-        <p className="text-2xl font-semibold tracking-tight md:text-4xl">
-          There is no rebuild.
-        </p>
-        <p className="mt-1 text-2xl font-semibold tracking-tight md:text-4xl">
-          Only continuous emergence.
-        </p>
-      </div>
-
       {lb && (
         <div
           className="fixed inset-0 z-[60] flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm"

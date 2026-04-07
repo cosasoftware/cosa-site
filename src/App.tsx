@@ -39,6 +39,7 @@ export default function App() {
       <CoreClaim />
       <BriefingLeadIn />
       <BriefingCard />
+      <EnterpriseCard />
       <CreativeCard />
       <ProjectionBridge />
       <Screens />
@@ -150,9 +151,10 @@ function BriefingLeadIn() {
     <section className="mx-auto max-w-6xl px-6 py-4 md:py-8">
       <a
         href="/executive-briefing.html"
-        className="block overflow-hidden rounded-[8px] bg-[#141311] no-underline transition-opacity duration-200 hover:opacity-95"
+        className="relative block overflow-hidden rounded-[18px] bg-[#141311] no-underline transition-opacity duration-200 hover:opacity-95"
       >
-        <div className="grid items-center gap-10 px-7 py-10 md:grid-cols-[1fr_auto] md:px-14 md:py-14">
+ <div className="absolute left-5 top-6 bottom-6 w-[6px] rounded-full bg-[#78AAFF]" />
+       <div className="grid items-center gap-4 px-6 py-8 md:grid-cols-[1fr_auto] md:px-10 md:py-10">
           <div>
             <div className="mb-5 text-[10px] font-normal uppercase tracking-[0.22em] text-white/35 md:text-[11px]">
               Cosa Software · Strategic Overview
@@ -186,14 +188,57 @@ function BriefingLeadIn() {
   );
 }
 
+function EnterpriseCard() {
+  return (
+    <section className="mx-auto max-w-6xl px-6 py-3 md:py-6">
+      <a
+        href="/enterprise.html"
+        className="relative block overflow-hidden rounded-[18px] bg-[#141311] no-underline transition-all duration-300 hover:opacity-95 hover:-translate-y-[2px]"
+      >
+<div className="absolute left-5 top-6 bottom-6 w-[6px] rounded-full bg-[#78AAFF]" />
+        <div className="grid items-center gap-4 px-6 py-8 md:grid-cols-[1fr_auto] md:px-10 md:py-10">
+          <div>
+            <div className="mb-4 text-[10px] uppercase tracking-[0.22em] text-white/35">
+              Cosa Software · Enterprise Systems
+            </div>
+
+            <h2
+              className="mb-4 text-[clamp(30px,4vw,56px)] leading-[1.02] tracking-[-0.03em] text-white"
+              style={{ fontFamily: "Georgia, serif" }}
+            >
+              Enterprise Systems
+            </h2>
+
+            <p
+              className="mb-6 max-w-[620px] text-[clamp(18px,1.9vw,24px)] italic leading-[1.5] text-white/60"
+              style={{ fontFamily: "Georgia, serif" }}
+            >
+              Hardware, software, integration, and decades of support — governed in one continuous system.
+            </p>
+
+            <div className="text-sm tracking-[0.02em] text-white/45">
+              Development · Integration · Validation · Support
+            </div>
+          </div>
+
+          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-white/20 text-[22px] text-white md:h-16 md:w-16">
+            →
+          </div>
+        </div>
+      </a>
+    </section>
+  );
+}
+
 function CreativeCard() {
   return (
     <section className="mx-auto max-w-6xl px-6 py-4 md:py-8">
       <a
         href="/#/creative"
-        className="block overflow-hidden rounded-[8px] bg-[#141311] no-underline transition-opacity duration-200 hover:opacity-95"
+        className="relative block overflow-hidden rounded-[18px] bg-[#141311] no-underline transition-opacity duration-200 hover:opacity-95"
       >
-        <div className="grid items-center gap-10 px-7 py-10 md:grid-cols-[1fr_auto] md:px-14 md:py-14">
+<div className="absolute left-5 top-6 bottom-6 w-[6px] rounded-full bg-[#78AAFF]" />
+        <div className="grid items-center gap-4 px-6 py-8 md:grid-cols-[1fr_auto] md:px-10 md:py-10">
           <div>
             <div className="mb-5 text-[10px] font-normal uppercase tracking-[0.22em] text-white/35 md:text-[11px]">
               Cosa Software · Creative Development
@@ -402,7 +447,7 @@ function Screens() {
 function CTA() {
   return (
     <section id="demo" className="mx-auto my-10 max-w-6xl px-6 md:my-14">
-      <div className="rounded-3xl border border-neutral-300 bg-white px-8 py-10 text-center md:px-14 md:py-14">
+      <div className="rounded-3xl border border-neutral-300 bg-white px-8 py-10 text-center md:px-10 md:py-10">
         <h3 className="text-2xl font-semibold tracking-tight md:text-4xl">
           See it in your domain.
         </h3>

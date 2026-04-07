@@ -147,7 +147,7 @@ function SystemStatement() {
     <section className="mx-auto max-w-6xl px-6 pt-2 pb-16 text-center">
       <div className="mx-auto max-w-3xl">
         <p className="text-xl md:text-2xl text-neutral-700 leading-relaxed tracking-tight">
- Emergence is more than an application platform — it is a system, delivered through the browser, where productivity applications run, evolve, and scale continuously.
+ Emergence is more than an application platform — it is a system, delivered through the browser, where productivity applications run, evolve, and continuously scale.
          </p>
       </div>
     </section>

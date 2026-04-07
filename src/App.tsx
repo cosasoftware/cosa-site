@@ -49,17 +49,21 @@ export default function App() {
 }
 function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70">
-<div className="mx-auto flex max-w-6xl items-center justify-between px-2 py-2">
-  <div className="flex items-center gap-2">
-    <img src="/logo/cosa-mark-black.png" alt="Cosa" className="h-8 w-8 opacity-70" />
-    <div className="text-xl leading-none font-bold tracking-tight text-neutral-600">
-      Cosa Software
+
+<header className="sticky top-0 z-50 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70">
+  <div className="flex h-12 w-full items-center justify-between px-2">
+    <div className="flex items-center gap-2">
+      <img src="/logo/cosa-mark-black.png" alt="Cosa" className="h-9 w-9 opacity-70" />
+      <div className="text-xl leading-none font-bold tracking-tight text-neutral-600">
+        Cosa Software
+      </div>
     </div>
   </div>
-</div>      <div className="h-px bg-neutral-200" />
-    </header>
-  );
+
+  <div className="h-px bg-neutral-200" />
+</header>
+
+ );
 }
 
 function Intro() {
@@ -139,8 +143,7 @@ function BriefingLeadIn() {
   );
 }function BriefingCard() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-4 md:py-8">
-      <a
+    <section className="mx-auto max-w-6xl px-6 py-2 md:py-0">      <a
         href="/executive-briefing.html"
         className="relative block overflow-hidden rounded-[18px] bg-[#141311] no-underline transition-opacity duration-200 hover:opacity-95"
       >
@@ -221,8 +224,7 @@ function EnterpriseCard() {
 
 function CreativeCard() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-4 md:py-8">
-      <a
+    <section className="mx-auto max-w-6xl px-6 py-2 md:py-0">      <a
         href="/#/creative"
         className="relative block overflow-hidden rounded-[18px] bg-[#141311] no-underline transition-opacity duration-200 hover:opacity-95"
       >
@@ -491,24 +493,23 @@ function CreativeDevelopmentPage() {
       <NarrativeBlock />
       <RealityBridge />
       <CinematicClose />
-      <GalleryLink />
+      <Footer2 />
     </main>
   );
 }
 
 function CreativeHeader() {
   return (
-    <header className="sticky top-0 z-50 bg-neutral-950/85 backdrop-blur supports-[backdrop-filter]:bg-neutral-950/70">
-<div className="mx-auto flex max-w-6xl items-center justify-between px-2 py-2">
-        <a href="/#/" className="flex items-center gap-3 no-underline">
-          <img src="/logo/cosa-mark-white.png" alt="Cosa" className="h-10 w-10" />
-          <div className="font-medium tracking-tight text-white">Cosa Software</div>
-        </a>
-
-       </div>
-
-      <div className="h-px bg-white/10" />
-    </header>
+<header className="sticky top-0 z-50 bg-neutral-950/85 backdrop-blur supports-[backdrop-filter]:bg-neutral-950/70">
+  <div className="flex h-12 w-full items-center justify-between px-2">
+    <div className="flex items-center gap-2">
+      <img src="/logo/cosa-mark-white.png" alt="Cosa" className="h-9 w-9 " />
+      <div className="text-xl leading-none font-bold tracking-tight  text-white">
+        Cosa Software
+      </div>
+    </div>
+  </div>
+</header>
   );
 }
 
@@ -668,7 +669,7 @@ function SystemProof() {
 
         <div className="mb-9 overflow-hidden">
   <div className="text-xs tracking-[0.2em] uppercase text-white/40 mb-3">
-    Governed Process & Flow — Unified
+    Governed Process & Storyboard Flow — Unified
   </div>
 
          <img
@@ -695,7 +696,7 @@ function NarrativeBlock() {
       <section className="mx-auto text-center">
         <p className="text-lg leading-relaxed text-white/70 md:text-xl">
           Consider a technical director overseeing a complex production —
-          writers, concept artists, animators, directors, and casting teams
+          writers, concept artists, animators, and directors
           distributed across locations. Storyboards evolve in real time. Scenes,
           wardrobe, and character development move through governed approval
           stages.
@@ -752,17 +753,36 @@ function CinematicClose() {
         <div className="absolute bottom-0 left-0 right-0 px-6 pb-10 md:px-10 md:pb-14">
           <div className="mx-auto max-w-6xl">
             <p
-              className="max-w-2xl text-2xl leading-[1.2] text-white/90 md:text-4xl"
+              className="max-w-2xl text-2xl leading-[1.2] text-white/70 md:text-4xl"
+              style={{ fontFamily: "Georgia, serif"}}
+            >
+              Evolutionary software built on latent fields, projections, and lenses — not features.
+              <br />
+              <br />
+            </p>
+             <p
+              className="max-w-2xl text-2xl leading-[1.2] text-white md:text-4xl"
               style={{ fontFamily: "Georgia, serif", fontStyle: "italic" }}
             >
-              Built on fields and projections — not features.
-              <br />
-              A different class of software.
+               A different class of software.
             </p>
-          </div>
+         </div>
         </div>
       </section>
     </FadeInSection>
+  );
+}
+
+function Footer2() {
+  return (
+    <footer className="w-full bg-neutral-950 px-6 pb-14 pt-2 text-xs text-white">
+        <br />
+
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <span>Copyright © 2026 Cosa Software. All rights reserved.</span>
+        <span>Continuous system evolution</span>
+      </div>
+    </footer>
   );
 }
 

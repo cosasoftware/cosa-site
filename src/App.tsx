@@ -34,7 +34,7 @@ export default function App() {
       <Intro />
       <Banner />
       <CoreClaim />
-      <BriefingLeadIn />
+      <SystemStatement />
       <BriefingCard />
       <EnterpriseCard />
       <CreativeCard />
@@ -63,6 +63,7 @@ function Header() {
  );
 }
 
+
 function Intro() {
   return (
     <section className="mx-auto max-w-6xl px-6 pb-0 pt-10 text-center md:pt-14">
@@ -73,9 +74,25 @@ function Intro() {
 <p className="mt-2 text-xl md:text-2xl text-neutral-700">
   AI-Driven Codeless Applications
 </p>
-      <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-neutral-600 md:text-lg">
-        Not built. Not deployed. Systems emerge and evolve in real time.
+
+<div className="mt-10 px-6 sm:mt-12 md:mt-14">
+  <div className="mx-auto max-w-6xl">
+    <div className="w-full max-w-[1040px] border-t-4 border-blue-500/80 pt-4 lg:border-t-0 lg:border-l-[4px] lg:pl-8 lg:pt-0">
+      <p className="text-left text-[1.55rem] leading-[1.18] tracking-[-0.045em] text-neutral-800 sm:text-[2rem] sm:leading-[1.16] md:text-[2.35rem] md:leading-[1.14] lg:text-[3rem] lg:leading-[1.1] xl:text-[3.55rem]">
+        Emergence is a process improvement platform that enables teams to
+        continuously improve their workflows in real time.
       </p>
+
+      <p className="mt-5 text-left text-[1rem] leading-[1.32] tracking-[-0.03em] text-neutral-700 sm:text-[1.35rem] sm:leading-[1.3] md:mt-6 md:text-[1.7rem] md:leading-[1.24] lg:text-[1.95rem] xl:text-[2.15rem]">
+        Not building and deploying — but continuously optimizing and evolving
+        as work happens.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
     </section>
   );
 }
@@ -108,7 +125,7 @@ function CoreClaim() {
   Changes take effect immediately.
 </h2>
         <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-neutral-700 md:text-2xl">
-          Powerful workflows — generated, governed, and evolved in real time.
+          Powerful process-driven workflows — generated, governed, and evolved in real time.
         </p>
        <p className="text-lg leading-relaxed text-neutral-700 md:text-2xl">
           AI-Driven Across the Stack.
@@ -121,21 +138,20 @@ function CoreClaim() {
     </section>
   );
 }
-function BriefingLeadIn() {
+
+function SystemStatement() {
   return (
-    <section className="mx-auto max-w-6xl px-6 pt-10 pb-1 text-center">
-      <p
-        className="mx-auto max-w-3xl text-[clamp(22px,2.6vw,32px)] leading-relaxed text-neutral-700"
-        style={{
-            fontWeight: "bold",
-          letterSpacing: "-0.01em",
-        }}
-      >
-        Built on latent fields and projections — not features.
-       </p>
+    <section className="mx-auto max-w-6xl px-6 pt-2 pb-16 text-center">
+      <div className="mx-auto max-w-3xl">
+        <p className="text-xl md:text-2xl text-neutral-700 leading-relaxed tracking-tight">
+ Emergence is more than an application platform — it is a system, delivered through the browser, where productivity applications run, evolve, and scale continuously.
+         </p>
+      </div>
     </section>
   );
-}function BriefingCard() {
+}
+
+function BriefingCard() {
   return (
     <section className="mx-auto max-w-6xl px-6 py-2 md:py-0">      <a
         href="/executive-briefing.html"
@@ -720,14 +736,14 @@ function NarrativeBlock() {
 
     <p className="mt-6 text-lg leading-relaxed text-white/70 md:text-xl">
       With generative AI integrated into the Emergence stack, every ticket
-      in that pipeline becomes a living storyboard. Images and video are
-      generated and revised directly inside the process. The technical
+      in that pipeline becomes a living storyboard. Images and video can be
+      generated and revised using prompts, directly inside the process flow. The technical
       director reviews and approves from anywhere — across every stage of
       production — even from an iPad.
     </p>
 
     <p className="mt-6 text-lg leading-relaxed text-white/70 md:text-xl">
-      The same engine that governs pharmacy prescriptions drives commercial
+      The same engine that governs enterprise buisness applications drives commercial
       and film production workflows.
     </p>
 

@@ -67,32 +67,35 @@ function Header() {
 function Intro() {
   return (
     <section className="mx-auto max-w-6xl px-6 pb-0 pt-10 text-center md:pt-14">
-      <h1 className="text-6xl md:text-8xl font-semibold tracking-tight">
+      <h1 className="text-6xl md:text-8xl font-semibold tracking-[-0.06em] text-neutral-950">
         Emergence
       </h1>
 
-<p className="mt-2 text-xl md:text-2xl text-neutral-700">
-  Evolutionary Process IntelligenceAI-Driven Codeless Applications
-</p>
+      <div className="mt-3">
+        <p className="text-[1.6rem] md:text-[2.5rem] font-medium italic tracking-[-0.03em] text-neutral-700">
+          Evolutionary Process Intelligence
+        </p>
 
-<div className="mt-10 px-6 sm:mt-12 md:mt-14">
-  <div className="mx-auto max-w-6xl">
-    <div className="w-full max-w-[1040px] border-t-4 border-blue-500/80 pt-4 lg:border-t-0 lg:border-l-[4px] lg:pl-8 lg:pt-0">
-      <p className="text-left text-[1.55rem] leading-[1.18] tracking-[-0.045em] text-neutral-800 sm:text-[2rem] sm:leading-[1.16] md:text-[2.35rem] md:leading-[1.14] lg:text-[3rem] lg:leading-[1.1] xl:text-[3.55rem]">
-        Emergence is a process improvement platform that enables teams to
-        continuously improve their workflows in real time.
-      </p>
+        <p className="mt-2 text-[0.85rem] md:text-[1.1rem] font-semibold uppercase tracking-[0.18em] text-neutral-500">
+          AI-Driven Codeless Applications
+        </p>
+      </div>
 
-      <p className="mt-5 text-left text-[1rem] leading-[1.32] tracking-[-0.03em] text-neutral-700 sm:text-[1.35rem] sm:leading-[1.3] md:mt-6 md:text-[1.7rem] md:leading-[1.24] lg:text-[1.95rem] xl:text-[2.15rem]">
-        Not building and deploying — but continuously optimizing and evolving
-        as work happens.
-      </p>
-    </div>
-  </div>
-</div>
+      <div className="mt-10 px-6 sm:mt-12 md:mt-14">
+        <div className="mx-auto max-w-6xl">
+          <div className="w-full max-w-[1040px] border-t-4 border-blue-500/80 pt-4 lg:border-l-[4px] lg:border-t-0 lg:pl-8 lg:pt-0">
+            <p className="text-left text-[1.55rem] leading-[1.18] tracking-[-0.045em] text-neutral-800 sm:text-[2rem] sm:leading-[1.16] md:text-[2.35rem] md:leading-[1.14] lg:text-[3rem] lg:leading-[1.1] xl:text-[3.55rem]">
+              Emergence is a process improvement platform that enables teams to
+              continuously improve their workflows in real time.
+            </p>
 
-
-
+            <p className="mt-5 text-left text-[1rem] leading-[1.32] tracking-[-0.03em] text-neutral-700 sm:text-[1.35rem] sm:leading-[1.3] md:mt-6 md:text-[1.7rem] md:leading-[1.24] lg:text-[1.95rem] xl:text-[2.15rem]">
+              Not building and deploying — but continuously optimizing and
+              evolving as work happens.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

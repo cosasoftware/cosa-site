@@ -50,15 +50,14 @@ export default function App() {
 function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <div className="flex items-center gap-3">
-          <img src="/logo/cosa-mark.png" alt="Cosa" className="h-10 w-10" />
-          <div className="text-6xl md:text-2xl font-semibold  font-bold tracking-tight">Cosa Software</div>
-        </div>
-
-       </div>
-
-      <div className="h-px bg-neutral-200" />
+<div className="mx-auto flex max-w-6xl items-center justify-between px-2 py-2">
+  <div className="flex items-center gap-2">
+    <img src="/logo/cosa-mark-black.png" alt="Cosa" className="h-8 w-8 opacity-70" />
+    <div className="text-xl leading-none font-bold tracking-tight text-neutral-600">
+      Cosa Software
+    </div>
+  </div>
+</div>      <div className="h-px bg-neutral-200" />
     </header>
   );
 }
@@ -501,21 +500,13 @@ function CreativeDevelopmentPage() {
 function CreativeHeader() {
   return (
     <header className="sticky top-0 z-50 bg-neutral-950/85 backdrop-blur supports-[backdrop-filter]:bg-neutral-950/70">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+<div className="mx-auto flex max-w-6xl items-center justify-between px-2 py-2">
         <a href="/#/" className="flex items-center gap-3 no-underline">
-          <img src="/logo/cosa-mark.png" alt="Cosa" className="h-10 w-10" />
+          <img src="/logo/cosa-mark-white.png" alt="Cosa" className="h-10 w-10" />
           <div className="font-medium tracking-tight text-white">Cosa Software</div>
         </a>
 
-        <nav className="hidden items-center gap-8 text-sm text-white/65 md:flex">
-          <a href="/#/" className="hover:text-white">
-            Home
-          </a>
-          <a href="/#/creative" className="hover:text-white">
-            Creative
-          </a>
-        </nav>
-      </div>
+       </div>
 
       <div className="h-px bg-white/10" />
     </header>
@@ -667,7 +658,7 @@ function SystemProof() {
     <FadeInSection className="px-6 py-20 md:px-10 md:py-28">
       <section className="mx-auto max-w-7xl">
         <div className="mb-6 text-center">
-          <p className="text-[10px] uppercase tracking-[0.24em] text-white/45 md:text-xs">
+          <p className="text-[22px] !text-[22px]  uppercase tracking-[0.24em] text-white/45 md:text-xs">
             StoryTeller
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">

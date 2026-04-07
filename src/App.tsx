@@ -56,15 +56,7 @@ function Header() {
           <div className="text-6xl md:text-2xl font-semibold  font-bold tracking-tight">Cosa Software</div>
         </div>
 
-        <nav className="hidden items-center gap-8 text-sm text-neutral-600 md:flex">
-          <a href="#screens" className="hover:text-neutral-950">
-            Screens
-          </a>
-          <a href="#demo" className="hover:text-neutral-950">
-            Demo
-          </a>
-        </nav>
-      </div>
+       </div>
 
       <div className="h-px bg-neutral-200" />
     </header>
@@ -512,7 +504,7 @@ function CreativeHeader() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="/#/" className="flex items-center gap-3 no-underline">
           <img src="/logo/cosa-mark.png" alt="Cosa" className="h-10 w-10" />
-          <div className="font-medium tracking-tight text-white">Emergence</div>
+          <div className="font-medium tracking-tight text-white">Cosa Software</div>
         </a>
 
         <nav className="hidden items-center gap-8 text-sm text-white/65 md:flex">

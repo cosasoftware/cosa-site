@@ -127,8 +127,7 @@ function BriefingLeadIn() {
       <p
         className="mx-auto max-w-3xl text-[clamp(22px,2.6vw,32px)] leading-relaxed text-neutral-700"
         style={{
-          fontStyle: "italic",
-           fontWeight: "bold",
+            fontWeight: "bold",
           letterSpacing: "-0.01em",
         }}
       >

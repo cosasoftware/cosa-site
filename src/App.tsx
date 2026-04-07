@@ -776,7 +776,7 @@ function CinematicClose() {
               className="max-w-2xl text-2xl leading-[1.2] text-white/70 md:text-4xl"
               style={{ fontFamily: "Georgia, serif"}}
             >
-              Evolutionary software built on latent fields, projections, and lenses — not features.
+              Evolutionary data-driven software built on latent fields, projections, and lenses — not features.
               <br />
               <br />
             </p>

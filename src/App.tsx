@@ -72,7 +72,7 @@ function Intro() {
       </h1>
 
 <p className="mt-2 text-xl md:text-2xl text-neutral-700">
-  AI-Driven Codeless Applications
+  Evolutionary Process IntelligenceAI-Driven Codeless Applications
 </p>
 
 <div className="mt-10 px-6 sm:mt-12 md:mt-14">
@@ -282,7 +282,7 @@ function ProjectionBridge() {
         Infinite domains.
       </p>
         <p className="mt-4 text-base text-neutral-600 md:text-lg">
-          <span className="italic">Same engine. Different projections.</span>
+          <span className="italic">Turn Real Work Into Continuous Evolution. <br/>Improve how work gets done across every team, every workflow, and every system in real time.</span>
         </p>
     </section>
   );
@@ -323,7 +323,7 @@ function Screens() {
         <h2 className="mt-1 text-3xl font-semibold tracking-tight md:text-5xl">
           The system does not.
         </h2>
-        <p className="mt-4 text-neutral-600">Only the data schema evolves.</p>
+        <p className="mt-4 text-neutral-600">End-to-end process evolution.</p>
         <p className="mt-10 text-sm text-neutral-500">Loading…</p>
       </section>
     );
@@ -344,7 +344,7 @@ function Screens() {
           The system does not.
         </h2>
         <p className="mt-4 text-base text-neutral-600 md:text-lg">
-          <span className="italic">Only the data schema evolves.</span>
+          <span className="italic">End-to-end process evolution.</span>
         </p>
       </div>
 

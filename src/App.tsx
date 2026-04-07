@@ -17,10 +17,7 @@ function useHashRoute() {
     return () => window.removeEventListener("hashchange", onChange);
   }, []);
 
-  React.useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [route]);
-
+ 
   return route;
 }
 /** Emergence — high-conviction variant */
@@ -709,39 +706,41 @@ function SystemProof() {
 
 function NarrativeBlock() {
   return (
-    <FadeInSection className="pt-4 pb-12 md:pt-6 md:pb-16">
-      <section className="mx-auto max-w-3xl">
-        
-        <p className="text-lg leading-relaxed text-white/70 md:text-xl">
-          Consider a technical director overseeing a complex production —
-          writers, concept artists, animators, and directors distributed across
-          locations. Storyboards evolve in real time. Scenes, wardrobe, and
-          character development move through governed approval stages.
-        </p>
+<FadeInSection className="pt-4 pb-12 md:pt-6 md:pb-16">
+  <section className="mx-auto max-w-3xl relative pl-8 md:pl-10">
 
-        <p className="mt-6 text-lg leading-relaxed text-white/70 md:text-xl">
-          With generative AI integrated into the Emergence stack, every ticket
-          in that pipeline becomes a living storyboard. Images and video are
-          generated and revised directly inside the process. The technical
-          director reviews and approves from anywhere — across every stage of
-          production — even from an iPad.
-        </p>
+    {/* Blue line */}
+    <div className="absolute left-0 top-1 bottom-2 w-[5px] rounded-full bg-[#78AAFF] shadow-[0_0_10px_rgba(120,170,255,0.4)]" />
 
-        <p className="mt-6 text-lg leading-relaxed text-white/70 md:text-xl">
-          The same engine that governs pharmacy prescriptions drives commercial
-          and film production workflows.
-        </p>
+    <p className="text-lg leading-relaxed text-white/70 md:text-xl">
+      Consider a technical director overseeing a complex production —
+      writers, concept artists, animators, and directors distributed across
+      locations. Storyboards evolve in real time. Scenes, wardrobe, and
+      character development move through governed approval stages.
+    </p>
 
-        <p
-          className="mt-10 text-xl tracking-tight text-white md:text-2xl"
-          style={{ fontFamily: "Georgia, serif", fontStyle: "italic" }}
-        >
-          The domain changes. The system does not.
-        </p>
+    <p className="mt-6 text-lg leading-relaxed text-white/70 md:text-xl">
+      With generative AI integrated into the Emergence stack, every ticket
+      in that pipeline becomes a living storyboard. Images and video are
+      generated and revised directly inside the process. The technical
+      director reviews and approves from anywhere — across every stage of
+      production — even from an iPad.
+    </p>
 
-      </section>
-    </FadeInSection>
-  );
+    <p className="mt-6 text-lg leading-relaxed text-white/70 md:text-xl">
+      The same engine that governs pharmacy prescriptions drives commercial
+      and film production workflows.
+    </p>
+
+    <p
+      className="mt-10 text-xl tracking-tight text-white md:text-2xl"
+      style={{ fontFamily: "Georgia, serif", fontStyle: "italic" }}
+    >
+      The domain changes. The system does not.
+    </p>
+
+  </section>
+</FadeInSection>  );
 }
 function RealityBridge() {
   return (

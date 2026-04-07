@@ -130,15 +130,13 @@ function BriefingLeadIn() {
       <p
         className="mx-auto max-w-3xl text-[clamp(22px,2.6vw,32px)] leading-relaxed text-neutral-700"
         style={{
-          fontFamily: "Georgia, serif",
           fontStyle: "italic",
+           fontWeight: "bold",
           letterSpacing: "-0.01em",
         }}
       >
-        Built on fields and projections — not features.
-        <br />
-        A different class of software.
-      </p>
+        Built on latent fields and projections — not features.
+       </p>
     </section>
   );
 }function BriefingCard() {
@@ -616,14 +614,22 @@ function CharacterCollage() {
 
 function QuoteBreak({ children }: { children: React.ReactNode }) {
   return (
-    <FadeInSection className="px-6 py-20 text-center md:px-10 md:py-28">
-      <section className="mx-auto max-w-4xl">
-        <p
-          className="text-[clamp(28px,4vw,48px)] leading-[1.18] text-white/85"
-          style={{ fontFamily: "Georgia, serif", fontStyle: "italic" }}
-        >
-          {children}
-        </p>
+    <FadeInSection className="px-6 py-21 md:px-10 md:py-14">
+      <section className="mx-auto max-w-6xl">
+        <div className="grid grid-cols-[14px_minmax(0,1100px)] items-center gap-6 md:grid-cols-[16px_minmax(0,980px)] md:gap-8">
+          <div className="flex justify-center">
+            <div className="h-[140px] w-[5px] rounded-full bg-[#78AAFF]" />
+          </div>
+
+          <div>
+            <p
+              className="max-w-[980px] text-[clamp(34px,5vw,76px)] leading-[1.06] text-white/90"
+              style={{ fontFamily: "Georgia, serif", fontStyle: "italic" }}
+            >
+              {children}
+            </p>
+          </div>
+        </div>
       </section>
     </FadeInSection>
   );
@@ -655,23 +661,34 @@ function WardrobeCastingGrid() {
 
 function SystemProof() {
   return (
-    <FadeInSection className="px-6 py-20 md:px-10 md:py-28">
+    <FadeInSection className="px-6 py-20 md:px-10 md:py-18">
       <section className="mx-auto max-w-7xl">
-        <div className="mb-6 text-center">
-          <p className="text-[22px] !text-[22px]  uppercase tracking-[0.24em] text-white/45 md:text-xs">
-            StoryTeller
-          </p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
-            World, character, and scene development governed in one system.
-          </h2>
-        </div>
 
+      
+<div className="mx-auto mb-9 max-w-6xl">
+  <div className="grid grid-cols-[18px_1fr] items-start gap-6 md:gap-8">
+    <div className="flex justify-center pt-2">
+      <div className="w-[6px] h-[190px] rounded-full bg-[#78AAFF]" />
+    </div>
+
+    <div>
+      <div className="mb-4 text-xs uppercase tracking-[0.24em] text-white/40 md:text-[11px]">
+        StoryTeller
+      </div>
+
+      <h2 className="text-3xl font-semibold leading-[1.02] tracking-tight md:text-6xl">
+        World, character, and scene development governed in one system.
+      </h2>
+
+      <div className="mt-4 text-xs uppercase tracking-[0.2em] text-white/35 md:text-[11px]">
+        Governed Process &amp; Storyboard Flow — Unified
+      </div>
+    </div>
+  </div>
+</div>
 
         <div className="mb-9 overflow-hidden">
-  <div className="text-xs tracking-[0.2em] uppercase text-white/40 mb-3">
-    Governed Process & Storyboard Flow — Unified
-  </div>
-
+ 
          <img
             src="/creative/storyteller-ui.jpg"
             alt="StoryTeller interface"
@@ -692,20 +709,22 @@ function SystemProof() {
 
 function NarrativeBlock() {
   return (
-    <FadeInSection className="px-6 py-8 md:px-10 md:py-12">
-      <section className="mx-auto text-center">
+    <FadeInSection className="pt-4 pb-12 md:pt-6 md:pb-16">
+      <section className="mx-auto max-w-3xl">
+        
         <p className="text-lg leading-relaxed text-white/70 md:text-xl">
           Consider a technical director overseeing a complex production —
-          writers, concept artists, animators, and directors
-          distributed across locations. Storyboards evolve in real time. Scenes,
-          wardrobe, and character development move through governed approval
-          stages.
+          writers, concept artists, animators, and directors distributed across
+          locations. Storyboards evolve in real time. Scenes, wardrobe, and
+          character development move through governed approval stages.
         </p>
 
         <p className="mt-6 text-lg leading-relaxed text-white/70 md:text-xl">
           With generative AI integrated into the Emergence stack, every ticket
           in that pipeline becomes a living storyboard. Images and video are
-          generated and revised directly inside the process. The technical director reviews and approves from anywhere — across every stage of production — even from an iPad.
+          generated and revised directly inside the process. The technical
+          director reviews and approves from anywhere — across every stage of
+          production — even from an iPad.
         </p>
 
         <p className="mt-6 text-lg leading-relaxed text-white/70 md:text-xl">
@@ -713,14 +732,17 @@ function NarrativeBlock() {
           and film production workflows.
         </p>
 
-        <p className="mt-8 text-xl font-medium tracking-tight text-white md:text-2xl">
+        <p
+          className="mt-10 text-xl tracking-tight text-white md:text-2xl"
+          style={{ fontFamily: "Georgia, serif", fontStyle: "italic" }}
+        >
           The domain changes. The system does not.
         </p>
+
       </section>
     </FadeInSection>
   );
 }
-
 function RealityBridge() {
   return (
     <FadeInSection className="px-3 py-3 md:px-4 md:py-4">

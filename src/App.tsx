@@ -100,7 +100,7 @@ function CoreClaim() {
 <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">
   Build cycles collapse to minutes.
 </h2>
-<h2 className="text-3xl md:text-5xl font-semibold tracking-tight mt-1">
+<h2 className="text-4xl md:text-5xl font-semibold tracking-tight mt-1">
   Deployment is continuous.
 </h2>
 <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mt-1">
@@ -325,17 +325,20 @@ function Screens() {
 
   return (
     <section id="screens" className="mx-auto max-w-6xl px-6 pb-6 pt-2">
-      <div className="text-center">
-        <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">
-          The domain changes.
-        </h2>
-        <h2 className="mt-1 text-3xl font-semibold tracking-tight md:text-5xl">
-          The system does not.
-        </h2>
-        <p className="mt-4 text-base text-neutral-600 md:text-lg">
-          Only the schema evolves.
-        </p>
-      </div>
+  <div className="rounded-2xl border border-neutral-200 bg-white px-8 py-10 md:px-10">
+
+    <h3 className="text-3xl md:text-4xl font-semibold tracking-tight text-neutral-950">
+      The domain changes.
+      <br />
+      The system does not.
+    </h3>
+
+    <p className="mt-4 text-sm md:text-base text-neutral-500">
+      Only the schema evolves.
+    </p>
+
+    {/* horizontal rule */}
+ <div className="mt-3 h-[2px] w-74 bg-neutral-400" />  </div>
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
         {keys.map((k) => {
@@ -472,7 +475,7 @@ function Footer() {
       <div className="mb-6 h-px bg-neutral-200" />
       <div className="flex flex-col gap-3 sm:flex-row sm.items-center sm:justify-between">
         <span>Copyright © 2026 Cosa Software. All rights reserved.</span>
-        <span>Systems that never stop becoming.</span>
+        <span>Continuous system evolution.</span>
       </div>
     </footer>
   );

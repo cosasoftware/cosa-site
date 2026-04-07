@@ -270,9 +270,7 @@ function ProjectionBridge() {
         Infinite domains.
       </p>
 
-      <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-600 md:text-lg">
-        Same engine. Different projections.
-      </p>
+      <span className="italic">Same engine. Different projections.</span>
     </section>
   );
 }
@@ -312,7 +310,7 @@ function Screens() {
         <h2 className="mt-1 text-3xl font-semibold tracking-tight md:text-5xl">
           The system does not.
         </h2>
-        <p className="mt-4 text-neutral-600">Only the schema evolves.</p>
+        <p className="mt-4 text-neutral-600">Only the data schema evolves.</p>
         <p className="mt-10 text-sm text-neutral-500">Loading…</p>
       </section>
     );
@@ -333,7 +331,7 @@ function Screens() {
           The system does not.
         </h2>
         <p className="mt-4 text-base text-neutral-600 md:text-lg">
-          Only the schema evolves.
+          <span className="italic">Only the data schema evolves.</span>
         </p>
       </div>
 

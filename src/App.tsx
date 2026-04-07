@@ -574,7 +574,7 @@ function HeroCreature() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/70" />
         <div className="absolute bottom-0 left-0 right-0 px-6 pb-10 md:px-10 md:pb-14">
           <div className="mx-auto max-w-6xl">
-            <p className="text-[10px] text-2xl uppercase tracking-[0.24em] text-white/55 text-7xl ">
+            <p className="text-[18px] text-2xl uppercase tracking-[0.24em] text-white/55 text-7xl ">
               Creative Development
             </p>
             <h1 className="mt-3 max-w-4xl text-4xl font-bold tracking-tight md:text-6xl">

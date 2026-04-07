@@ -243,7 +243,7 @@ function CreativeCard() {
               className="mb-7 max-w-[620px] text-[clamp(18px,1.9vw,25px)] font-normal italic leading-[1.5] text-white/60"
               style={{ fontFamily: "Georgia, serif" }}
             >
-              Story, scene, wardrobe, and character development — inside of governed process flow.
+              Story, scene, wardrobe, and character development — built for teams, inside governed process flow.
             </p>
 
             <div className="text-sm tracking-[0.02em] text-white/45">
@@ -269,8 +269,9 @@ function ProjectionBridge() {
       <p className="mt-1 text-3xl font-semibold tracking-tight md:text-5xl">
         Infinite domains.
       </p>
-
-      <span className="italic">Same engine. Different projections.</span>
+        <p className="mt-4 text-base text-neutral-600 md:text-lg">
+          <span className="italic">Same engine. Different projections.</span>
+        </p>
     </section>
   );
 }
@@ -576,7 +577,7 @@ function HeroCreature() {
               Creative Development
             </p>
             <h1 className="mt-3 max-w-4xl text-4xl font-bold tracking-tight md:text-6xl">
-           Story, scene, wardrobe, and character development — inside of governed process flow.
+           Story, scene, wardrobe, and character development — built for teams, inside governed process flow.
                 </h1>
           </div>
         </div>
@@ -664,8 +665,13 @@ function SystemProof() {
           </h2>
         </div>
 
-        <div className="overflow-hidden">
-          <img
+
+        <div className="mb-9 overflow-hidden">
+  <div className="text-xs tracking-[0.2em] uppercase text-white/40 mb-3">
+    Governed Process & Flow — Unified
+  </div>
+
+         <img
             src="/creative/storyteller-ui.jpg"
             alt="StoryTeller interface"
             className="w-full object-cover"
@@ -698,9 +704,7 @@ function NarrativeBlock() {
         <p className="mt-6 text-lg leading-relaxed text-white/70 md:text-xl">
           With generative AI integrated into the Emergence stack, every ticket
           in that pipeline becomes a living storyboard. Images and video are
-          generated and revised directly inside the process. The technical
-          director reviews and approves from anywhere — including from an iPad
-          on set.
+          generated and revised directly inside the process. The technical director reviews and approves from anywhere — across every stage of production — even from an iPad.
         </p>
 
         <p className="mt-6 text-lg leading-relaxed text-white/70 md:text-xl">

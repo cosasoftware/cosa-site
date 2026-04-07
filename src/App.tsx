@@ -154,8 +154,7 @@ function BriefingLeadIn() {
         className="relative block overflow-hidden rounded-[18px] bg-[#141311] no-underline transition-opacity duration-200 hover:opacity-95"
       >
  <div className="absolute left-5 top-6 bottom-6 w-[6px] rounded-full bg-[#78AAFF]" />
-       <div className="grid items-center gap-4 px-6 py-8 md:grid-cols-[1fr_auto] md:px-10 md:py-10">
-          <div>
+       <div className="grid items-center gap-4 pl-14 pr-6 py-8 md:grid-cols-[1fr_auto] md:pl-16 md:pr-10 md:py-10">          <div>
             <div className="mb-5 text-[10px] font-normal uppercase tracking-[0.22em] text-white/35 md:text-[11px]">
               Cosa Software · Strategic Overview
             </div>
@@ -196,8 +195,7 @@ function EnterpriseCard() {
         className="relative block overflow-hidden rounded-[18px] bg-[#141311] no-underline transition-all duration-300 hover:opacity-95 hover:-translate-y-[2px]"
       >
 <div className="absolute left-5 top-6 bottom-6 w-[6px] rounded-full bg-[#78AAFF]" />
-        <div className="grid items-center gap-4 px-6 py-8 md:grid-cols-[1fr_auto] md:px-10 md:py-10">
-          <div>
+        <div className="grid items-center gap-4 pl-14 pr-6 py-8 md:grid-cols-[1fr_auto] md:pl-16 md:pr-10 md:py-10">          <div>
             <div className="mb-4 text-[10px] uppercase tracking-[0.22em] text-white/35">
               Cosa Software · Enterprise Systems
             </div>
@@ -238,8 +236,7 @@ function CreativeCard() {
         className="relative block overflow-hidden rounded-[18px] bg-[#141311] no-underline transition-opacity duration-200 hover:opacity-95"
       >
 <div className="absolute left-5 top-6 bottom-6 w-[6px] rounded-full bg-[#78AAFF]" />
-        <div className="grid items-center gap-4 px-6 py-8 md:grid-cols-[1fr_auto] md:px-10 md:py-10">
-          <div>
+        <div className="grid items-center gap-4 pl-14 pr-6 py-8 md:grid-cols-[1fr_auto] md:pl-16 md:pr-10 md:py-10">          <div>
             <div className="mb-5 text-[10px] font-normal uppercase tracking-[0.22em] text-white/35 md:text-[11px]">
               Cosa Software · Creative Development
             </div>

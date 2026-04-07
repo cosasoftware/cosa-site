@@ -90,8 +90,8 @@ function Intro() {
             </p>
 
             <p className="mt-5 text-left text-[1rem] leading-[1.32] tracking-[-0.03em] text-neutral-700 sm:text-[1.35rem] sm:leading-[1.3] md:mt-6 md:text-[1.7rem] md:leading-[1.24] lg:text-[1.95rem] xl:text-[2.15rem]">
-              Not building and deploying — but continuously optimizing and
-              evolving as work happens.
+              Not by building and deploying — but by continuously optimizing and
+              evolving process flow as work happens.
             </p>
           </div>
         </div>

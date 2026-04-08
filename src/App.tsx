@@ -91,7 +91,7 @@ function Intro() {
 
             <p className="mt-5 text-left text-[1rem] leading-[1.32] tracking-[-0.03em] text-neutral-700 sm:text-[1.35rem] sm:leading-[1.3] md:mt-6 md:text-[1.7rem] md:leading-[1.24] lg:text-[1.95rem] xl:text-[2.15rem]">
               Not by building and deploying — but by continuously optimizing and
-              evolving process flow as work happens.
+              evolving existing process flow as work happens.
             </p>
           </div>
         </div>
@@ -147,7 +147,7 @@ function SystemStatement() {
     <section className="mx-auto max-w-6xl px-6 pt-2 pb-16 text-center">
       <div className="mx-auto max-w-3xl">
         <p className="text-xl md:text-2xl text-neutral-700 leading-relaxed tracking-tight">
- Emergence is more than an application platform — it is a system, delivered through the browser, where productivity applications run, evolve, and continuously scale.
+ Emergence is more than an application platform — it is a team based system, delivered through the browser, where productivity applications continuously run, evolve, and scale.
          </p>
       </div>
     </section>
@@ -730,24 +730,33 @@ function NarrativeBlock() {
     {/* Blue line */}
     <div className="absolute left-0 top-1 bottom-2 w-[5px] rounded-full bg-[#78AAFF] shadow-[0_0_10px_rgba(120,170,255,0.4)]" />
 
+    {/* Title */}
+    <div className="mb-6">
+      <div className="text-white text-xl md:text-2xl font-semibold tracking-tight">
+        Inside a Live Workflow
+      </div>
+    </div>
+
     <p className="text-lg leading-relaxed text-white/70 md:text-xl">
-      Consider a technical director overseeing a complex production —
-      writers, concept artists, animators, and directors distributed across
-      locations. Storyboards evolve in real time. Scenes, wardrobe, and
-      character development move through governed approval stages.
+      Consider a technical director overseeing a complex production — writers,
+      concept artists, animators, and directors distributed across locations.
+      Storyboards evolve in real time. Scenes, wardrobe, and character
+      development move through governed approval stages.
     </p>
 
     <p className="mt-6 text-lg leading-relaxed text-white/70 md:text-xl">
-      With generative AI integrated into the Emergence stack, every ticket
-      in that pipeline becomes a living storyboard. Images and video can be
-      generated and revised using prompts, directly inside the process flow. The technical
-      director reviews and approves from anywhere — across every stage of
-      production — even from an iPad.
+      With generative AI integrated into the Emergence stack, every ticket in
+      that pipeline becomes a living storyboard. Images and video can be
+      generated and revised using prompts, directly inside the process flow. The
+      technical director reviews and approves from anywhere — across every stage
+      of production — even from an iPad.
     </p>
 
     <p className="mt-6 text-lg leading-relaxed text-white/70 md:text-xl">
-      The same engine that governs enterprise buisness applications drives commercial
-      and film production workflows.
+      The same engine that governs commercial property management applications
+      drives film and commercial production workflows without modification,
+      enabling a level of coordinated collaboration typically reserved for
+      enterprise-scale systems.
     </p>
 
     <p
@@ -758,7 +767,8 @@ function NarrativeBlock() {
     </p>
 
   </section>
-</FadeInSection>  );
+</FadeInSection>
+  );
 }
 function RealityBridge() {
   return (
@@ -795,7 +805,7 @@ function CinematicClose() {
               className="max-w-2xl text-2xl leading-[1.2] text-white/70 md:text-4xl"
               style={{ fontFamily: "Georgia, serif"}}
             >
-              Evolutionary AI and data-driven software built on latent fields, projections, and lenses — not features.
+              AI and Evolutionary data-driven software built on latent fields, projections, and lenses — not features.
               <br />
               <br />
             </p>

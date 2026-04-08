@@ -337,8 +337,7 @@ function EpiSignatureLight() {
 
             <p className="mt-3 text-[1rem] leading-relaxed text-neutral-700 md:text-[1.08rem]">
               <span className="font-semibold text-neutral-900">EPI</span> is software that
-              continuously evolves workflows, data, and governance in real time,
-              without rebuilds or redeployments.
+              continuously evolves workflows in real time. <br/>No scripting. No rebuilds. No redeployment. <br/>Changes and improvements are made by the people who acutally use it every day.
             </p>
           </div>
         </div>
@@ -705,8 +704,7 @@ function EpiSignatureDark() {
 
             <p className="mt-3 text-[1rem] leading-relaxed text-white/65 md:text-[1.08rem]">
               <span className="font-semibold text-white">EPI</span> is software that
-              continuously evolves workflows in real time, without rebuilds or
-              redeployment.
+              continuously evolves workflows in real time. <br/>No scripting. No rebuilds. No redeployment. <br/>Changes and improvements are made by the people who acutally use it every day.
             </p>
           </div>
         </div>

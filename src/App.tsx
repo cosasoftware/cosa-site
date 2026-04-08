@@ -40,6 +40,7 @@ export default function App() {
       <CreativeCard />
       <ProjectionBridge />
       <Screens />
+      <EpiSignatureLight />
       <Footer />
     </main>
   );
@@ -294,32 +295,8 @@ function ProjectionBridge() {
 /* ----------------------- Screens with Galleries + Lightbox ----------------------- */
 
 function Screens() {
-  const [data, setData] = React.useState<{
-    order: string[];
-    titles: Record<string, string>;
-    images: Record<string, string[]>;
-  } | null>(null);
-
-  const [lb, setLb] = React.useState<{ key: string; index: number } | null>(
-    null
-  );
-
-  React.useEffect(() => {
-    fetch("/shots/manifest.json", { cache: "no-store" })
-      .then((r) => r.json())
-      .then(setData)
-      .catch((e) => {
-        console.error("Failed to load gallery manifest", e);
-        setData({ order: [], titles: {}, images: {} });
-      });
-  }, []);
-
-  if (!data) {
     return (
-      <section
-        id="screens"
-        className="mx-auto max-w-6xl px-6 pb-6 pt-2 text-center"
-      >
+      <section id="screens" className="mx-auto max-w-6xl px-6 pb-6 pt-2 text-center py-23">
         <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">
           The domain changes.
         </h2>
@@ -327,153 +304,31 @@ function Screens() {
           The system does not.
         </h2>
         <p className="mt-4 text-neutral-600">End-to-end process evolution.</p>
-        <p className="mt-10 text-sm text-neutral-500">Loading…</p>
       </section>
     );
-  }
-
-  const keys = data.order.filter((k) => (data.images[k]?.length ?? 0) > 0);
-  const titleFor = (k: string) =>
-    data.titles[k] ??
-    k.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
-
-  return (
-    <section id="screens" className="mx-auto max-w-6xl px-6 pb-6 pt-2">
-      <div className="text-center">
-        <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">
-          The domain changes.
-        </h2>
-        <h2 className="mt-1 text-3xl font-semibold tracking-tight md:text-5xl">
-          The system does not.
-        </h2>
-        <p className="mt-4 text-base text-neutral-600 md:text-lg">
-          <span className="italic">End-to-end process evolution.</span>
-        </p>
-      </div>
-
-      <div className="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-        {keys.map((k) => {
-          const imgs = data.images[k];
-          const preview = `/shots/${imgs[0]}`;
-
-          return (
-            <figure
-              key={k}
-              className="overflow-hidden rounded-2xl border border-neutral-300 bg-white"
-            >
-              <button
-                onClick={() => setLb({ key: k, index: 0 })}
-                className="block w-full focus:outline-none focus:ring-2 focus:ring-neutral-300"
-                aria-label={`Open ${titleFor(k)} gallery`}
-              >
-                <img
-                  src={preview}
-                  alt={titleFor(k)}
-                  className="block h-48 w-full object-cover"
-                />
-              </button>
-
-              <figcaption className="border-t border-neutral-300 bg-white px-3 py-3 text-center text-sm text-neutral-700 md:text-base">
-                {titleFor(k)}
-              </figcaption>
-            </figure>
-          );
-        })}
-      </div>
-
-      {lb && (
-        <div
-          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm"
-          onClick={() => setLb(null)}
-        >
-          <div
-            className="relative w-full max-w-5xl overflow-hidden rounded-2xl bg-white"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <img
-              src={`/shots/${data.images[lb.key][lb.index]}`}
-              alt={`${titleFor(lb.key)} ${lb.index + 1}`}
-              className="h-[70vh] w-full bg-white object-contain"
-            />
-
-            <button
-              onClick={() => setLb(null)}
-              className="absolute right-3 top-3 rounded-full bg-white/90 px-3 py-1 text-sm font-medium shadow hover:bg-white"
-            >
-              Close
-            </button>
-
-            <button
-              onClick={() =>
-                setLb(
-                  (s) =>
-                    s && {
-                      key: s.key,
-                      index:
-                        (s.index - 1 + data.images[s.key].length) %
-                        data.images[s.key].length,
-                    }
-                )
-              }
-              className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-3 py-1 text-sm font-medium shadow hover:bg-white"
-            >
-              ←
-            </button>
-
-            <button
-              onClick={() =>
-                setLb(
-                  (s) =>
-                    s && {
-                      key: s.key,
-                      index: (s.index + 1) % data.images[s.key].length,
-                    }
-                )
-              }
-              className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-3 py-1 text-sm font-medium shadow hover:bg-white"
-            >
-              →
-            </button>
-
-            <div className="absolute bottom-0 left-0 right-0 bg-white/95 py-2 text-center text-xs text-neutral-600">
-              {titleFor(lb.key)} · {lb.index + 1} /{" "}
-              {data.images[lb.key].length}
-            </div>
-          </div>
-        </div>
-      )}
-    </section>
-  );
 }
 
-function CTA() {
+
+function EpiSignatureLight() {
   return (
-    <section id="demo" className="mx-auto my-10 max-w-6xl px-6 md:my-14">
-      <div className="rounded-3xl border border-neutral-300 bg-white px-8 py-10 text-center md:px-10 md:py-10">
-        <h3 className="text-2xl font-semibold tracking-tight md:text-4xl">
-          See it in your domain.
-        </h3>
+    <section className="mx-auto max-w-6xl px-6 py-10 md:py-12">
+      <div className="border-y border-neutral-200 py-6 md:py-7">
+        <div className="grid grid-cols-[10px_1fr] gap-5 md:grid-cols-[12px_1fr] md:gap-6">
+          <div className="flex justify-center">
+            <div className="w-[5px] rounded-full bg-[#78AAFF] shadow-[0_0_10px_rgba(120,170,255,0.28)]" />
+          </div>
 
-        <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-neutral-600 md:text-base">
-          Bring your process. We’ll map it to one flow and hand you a working
-          demonstration of schema-driven execution you can inspect, reopen, and
-          evolve.
-        </p>
+          <div className="max-w-3xl">
+            <div className="text-[11px] font-semibold uppercase tracking-[0.22em] text-neutral-500 md:text-xs">
+              Evolutionary Process Intelligence
+            </div>
 
-        <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <a
-            href="mailto:hello@yourdomain.com"
-            className="rounded-full bg-neutral-950 px-6 py-3 text-sm font-semibold text-white transition hover:bg-neutral-800"
-          >
-            Request a private demo
-          </a>
-
-          <a
-            href="/executive-briefing.html"
-            className="rounded-full border border-neutral-300 px-6 py-3 text-sm font-semibold text-neutral-950 transition hover:bg-neutral-50"
-          >
-            Read the briefing
-          </a>
+            <p className="mt-3 text-[1rem] leading-relaxed text-neutral-700 md:text-[1.08rem]">
+              <span className="font-semibold text-neutral-900">EPI</span> is software that
+              continuously evolves workflows, data, and governance in real time,
+              without rebuilds or redeployments.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -482,17 +337,14 @@ function CTA() {
 
 function Footer() {
   return (
-    <footer className="mx-auto max-w-6xl px-6 pb-14 pt-2 text-xs text-neutral-500">
-      <div className="mb-6 h-px bg-neutral-200" />
-      <div className="flex flex-col gap-3 sm:flex-row sm.items-center sm:justify-between">
+    <footer className="w-full px-6 pb-6 pt-2 text-xs text-neutral-500">
+      <div className="mx-auto max-w-6xl flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <span>Copyright © 2026 Cosa Software. All rights reserved.</span>
         <span>Continuous system evolution</span>
       </div>
     </footer>
   );
-}
-
-function CreativeDevelopmentPage() {
+}function CreativeDevelopmentPage() {
   return (
     <main className="bg-neutral-950 text-white selection:bg-white selection:text-black">
       <CreativeHeader />
@@ -502,10 +354,11 @@ function CreativeDevelopmentPage() {
         Every ticket becomes a living storyboard.
       </QuoteBreak>
       <WardrobeCastingGrid />
-      <SystemProof />
-      <NarrativeBlock />
+    <NarrativeBlock />
       <RealityBridge />
+       <SystemProof />
       <CinematicClose />
+      <EpiSignatureDark />
       <Footer2 />
     </main>
   );
@@ -674,57 +527,9 @@ function WardrobeCastingGrid() {
   );
 }
 
-function SystemProof() {
-  return (
-    <FadeInSection className="px-6 py-20 md:px-10 md:py-18">
-      <section className="mx-auto max-w-7xl">
-
-      
-<div className="mx-auto mb-9 max-w-6xl">
-  <div className="grid grid-cols-[18px_1fr] items-start gap-6 md:gap-8">
-    <div className="flex justify-center pt-2">
-      <div className="w-[6px] h-[190px] rounded-full bg-[#78AAFF]" />
-    </div>
-
-    <div>
-      <div className="mb-4 text-xs uppercase tracking-[0.24em] text-white/40 md:text-[11px]">
-        StoryTeller
-      </div>
-
-      <h2 className="text-3xl font-semibold leading-[1.02] tracking-tight md:text-6xl">
-        World, character, and scene development governed in one system.
-      </h2>
-
-      <div className="mt-4 text-xs uppercase tracking-[0.2em] text-white/35 md:text-[11px]">
-        Governed Process &amp; Storyboard Flow — Unified
-      </div>
-    </div>
-  </div>
-</div>
-
-        <div className="mb-9 overflow-hidden">
- 
-         <img
-            src="/creative/storyteller-ui.jpg"
-            alt="StoryTeller interface"
-            className="w-full object-cover"
-          />
-        </div>
-        <div className="overflow-hidden">
-          <img
-            src="/creative/storyteller-ui2.jpg"
-            alt="StoryTeller interface"
-            className="w-full object-cover"
-          />
-        </div>
-     </section>
-    </FadeInSection>
-  );
-}
-
 function NarrativeBlock() {
   return (
-<FadeInSection className="pt-4 pb-12 md:pt-6 md:pb-16">
+<FadeInSection className="py-8 md:py-10">
   <section className="mx-auto max-w-3xl relative pl-8 md:pl-10">
 
     {/* Blue line */}
@@ -770,6 +575,8 @@ function NarrativeBlock() {
 </FadeInSection>
   );
 }
+
+
 function RealityBridge() {
   return (
     <FadeInSection className="px-3 py-3 md:px-4 md:py-4">
@@ -822,19 +629,90 @@ function CinematicClose() {
   );
 }
 
+function SystemProof() {
+  return (
+    <FadeInSection className="px-6 pt-8 pb-16 md:px-10 md:pt-10 md:pb-18">
+      <section className="mx-auto max-w-7xl">
+
+      
+<div className="mx-auto mb-9 max-w-6xl">
+  <div className="grid grid-cols-[18px_1fr] items-start gap-6 md:gap-8">
+    <div className="flex justify-center pt-2">
+      <div className="w-[6px] h-[190px] rounded-full bg-[#78AAFF]" />
+    </div>
+
+    <div>
+      <div className="mb-4 text-xs uppercase tracking-[0.24em] text-white/40 md:text-[11px]">
+        StoryTeller
+      </div>
+
+      <h2 className="text-3xl font-semibold leading-[1.02] tracking-tight md:text-6xl">
+        World, character, and scene development governed in one system.
+      </h2>
+
+      <div className="mt-4 text-xs uppercase tracking-[0.2em] text-white/35 md:text-[11px]">
+        Governed Process &amp; Storyboard Flow — Unified
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div className="mb-9 overflow-hidden">
+ 
+         <img
+            src="/creative/storyteller-ui.jpg"
+            alt="StoryTeller interface"
+            className="w-full object-cover"
+          />
+        </div>
+        <div className="overflow-hidden">
+          <img
+            src="/creative/storyteller-ui2.jpg"
+            alt="StoryTeller interface"
+            className="w-full object-cover"
+          />
+        </div>
+     </section>
+    </FadeInSection>
+  );
+}
+
+function EpiSignatureDark() {
+  return (
+    <section className="mx-auto max-w-6xl px-6 py-8 md:py-10">
+      <div className="border-y border-white/10 py-6 md:py-7">
+        <div className="grid grid-cols-[10px_1fr] gap-5 md:grid-cols-[12px_1fr] md:gap-6">
+          <div className="flex justify-center">
+            <div className="w-[5px] rounded-full bg-[#78AAFF] shadow-[0_0_10px_rgba(120,170,255,0.35)]" />
+          </div>
+
+          <div className="max-w-3xl">
+            <div className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/35 md:text-xs">
+              Evolutionary Process Intelligence
+            </div>
+
+            <p className="mt-3 text-[1rem] leading-relaxed text-white/65 md:text-[1.08rem]">
+              <span className="font-semibold text-white">EPI</span> is software that
+              continuously evolves workflows in real time, without rebuilds or
+              redeployment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Footer2() {
   return (
     <footer className="w-full bg-neutral-950 px-6 pb-14 pt-2 text-xs text-white">
-        <br />
-
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <div className="mx-auto flex max-w-6xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <span>Copyright © 2026 Cosa Software. All rights reserved.</span>
         <span>Continuous system evolution</span>
       </div>
     </footer>
   );
 }
-
 function GalleryLink() {
   return (
     <FadeInSection className="px-6 py-20 text-center md:px-10 md:py-24">

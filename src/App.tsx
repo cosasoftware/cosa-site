@@ -1,26 +1,55 @@
 import React from "react";
 
 function useHashRoute() {
-  const getRoute = () => {
+  const getRoute = React.useCallback(() => {
     const hash = window.location.hash || "#/";
     return hash.replace(/^#/, "");
-  };
-
-  const [route, setRoute] = React.useState(getRoute());
-
-  React.useEffect(() => {
-    const onChange = () => {
-      setRoute(getRoute());
-    };
-
-    window.addEventListener("hashchange", onChange);
-    return () => window.removeEventListener("hashchange", onChange);
   }, []);
 
- 
+  const [route, setRoute] = React.useState(getRoute);
+  const routeRef = React.useRef(getRoute());
+  const positionsRef = React.useRef<Record<string, number>>({});
+  const hasMountedRef = React.useRef(false);
+
+  React.useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
+    const saveCurrentScroll = () => {
+      positionsRef.current[routeRef.current] = window.scrollY;
+    };
+
+    const onHashChange = () => {
+      saveCurrentScroll();
+
+      const nextRoute = getRoute();
+      routeRef.current = nextRoute;
+      setRoute(nextRoute);
+
+      requestAnimationFrame(() => {
+        const y = positionsRef.current[nextRoute] ?? 0;
+        window.scrollTo(0, y);
+      });
+    };
+
+    const onScroll = () => {
+      positionsRef.current[routeRef.current] = window.scrollY;
+    };
+
+    window.addEventListener("hashchange", onHashChange);
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    hasMountedRef.current = true;
+
+    return () => {
+      window.removeEventListener("hashchange", onHashChange);
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, [getRoute]);
+
   return route;
-}
-/** Emergence — high-conviction variant */
+}/** Emergence — high-conviction variant */
 export default function App() {
   const route = useHashRoute();
 
@@ -35,9 +64,7 @@ export default function App() {
       <Banner />
       <CoreClaim />
       <SystemStatement />
-      <BriefingCard />
-      <EnterpriseCard />
-      <CreativeCard />
+      <DomainCards />
       <ProjectionBridge />
       <Screens />
       <EpiSignatureLight />
@@ -155,124 +182,109 @@ function SystemStatement() {
   );
 }
 
+function DomainCards() {
+  return (
+    <section className="mx-auto max-w-6xl px-6 py-6">
+      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+
+        {/* Executive */}
+        <div className="md:col-span-2 xl:col-span-1">
+          <BriefingCard />
+        </div>
+
+        {/* Enterprise */}
+        <EnterpriseCard />
+
+        {/* Creative */}
+        <CreativeCard />
+
+      </div>
+    </section>
+  );
+}
+
+/* ---------------- CARDS ---------------- */
+
+function BaseCard({
+  title,
+  subtitle,
+  footer,
+  href,
+  eyebrow,
+}: any) {
+  return (
+    <a
+      href={href}
+      className="relative block h-full overflow-hidden rounded-[18px] bg-[#141311] text-white transition hover:opacity-95"
+    >
+      <div className="absolute left-5 top-6 bottom-6 w-[6px] rounded-full bg-[#78AAFF]" />
+
+      <div className="relative flex h-full flex-col pl-14 pr-6 py-6 md:pl-16 md:pr-10 md:py-7">
+        <div>
+          <div className="mb-4 text-[11px] uppercase tracking-[0.22em] text-white/35">
+            {eyebrow}
+          </div>
+
+          <h2
+            className="mb-4 text-[clamp(30px,4vw,56px)] leading-tight"
+            style={{ fontFamily: "Georgia, serif" }}
+          >
+            {title}
+          </h2>
+
+          <p
+            className="mb-6 text-[clamp(18px,1.8vw,24px)] italic text-white/60"
+            style={{ fontFamily: "Georgia, serif" }}
+          >
+            {subtitle}
+          </p>
+        </div>
+
+        <div className="mt-auto text-sm text-white/45">
+          {footer}
+        </div>
+
+        <div className="absolute top-6 right-6 flex h-12 w-12 items-center justify-center rounded-full border border-white/20">
+          →
+        </div>
+      </div>
+    </a>
+  );
+}
+
 function BriefingCard() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-2 md:py-0">      <a
-        href="/executive-briefing.html"
-        className="relative block overflow-hidden rounded-[18px] bg-[#141311] no-underline transition-opacity duration-200 hover:opacity-95"
-      >
- <div className="absolute left-5 top-6 bottom-6 w-[6px] rounded-full bg-[#78AAFF]" />
-       <div className="grid items-center gap-4 pl-14 pr-6 py-8 md:grid-cols-[1fr_auto] md:pl-16 md:pr-10 md:py-10">          <div>
-            <div className="mb-5 text-[10px] font-normal uppercase tracking-[0.22em] text-white/35 md:text-[11px]">
-              Cosa Software · Strategic Overview
-            </div>
-
-            <h2
-              className="mb-5 text-[clamp(32px,4vw,58px)] font-normal leading-[1.02] tracking-[-0.03em] text-white"
-              style={{ fontFamily: "Georgia, serif" }}
-            >
-              Executive Briefing
-            </h2>
-
-            <p
-              className="mb-7 max-w-[620px] text-[clamp(18px,1.9vw,25px)] font-normal italic leading-[1.5] text-white/60"
-              style={{ fontFamily: "Georgia, serif" }}
-            >
-              Software is no longer constructed. It is induced.
-            </p>
-
-            <div className="text-sm tracking-[0.02em] text-white/45">
-              Architecture · Runtime generation · Governed evolution · The moat
-            </div>
-          </div>
-
-          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-white/20 text-[22px] text-white md:h-16 md:w-16">
-            →
-          </div>
-        </div>
-      </a>
-    </section>
+    <BaseCard
+      href="/executive-briefing.html"
+      eyebrow="Cosa Software · Strategic Overview"
+      title="Executive Briefing"
+      subtitle="Software is no longer constructed. It is induced."
+      footer="Architecture · Runtime generation · Governed evolution · The moat"
+    />
   );
 }
 
 function EnterpriseCard() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-3 md:py-6">
-      <a
-        href="/enterprise.html"
-        className="relative block overflow-hidden rounded-[18px] bg-[#141311] no-underline transition-all duration-300 hover:opacity-95 hover:-translate-y-[2px]"
-      >
-<div className="absolute left-5 top-6 bottom-6 w-[6px] rounded-full bg-[#78AAFF]" />
-        <div className="grid items-center gap-4 pl-14 pr-6 py-8 md:grid-cols-[1fr_auto] md:pl-16 md:pr-10 md:py-10">          <div>
-            <div className="mb-4 text-[10px] uppercase tracking-[0.22em] text-white/35">
-              Cosa Software · Enterprise Systems
-            </div>
-
-            <h2
-              className="mb-4 text-[clamp(30px,4vw,56px)] leading-[1.02] tracking-[-0.03em] text-white"
-              style={{ fontFamily: "Georgia, serif" }}
-            >
-              Enterprise Systems
-            </h2>
-
-            <p
-              className="mb-6 max-w-[620px] text-[clamp(18px,1.9vw,24px)] italic leading-[1.5] text-white/60"
-              style={{ fontFamily: "Georgia, serif" }}
-            >
-              Hardware, software, integration, and decades of support — governed in one continuous system.
-            </p>
-
-            <div className="text-sm tracking-[0.02em] text-white/45">
-              Development · Integration · Validation · Support
-            </div>
-          </div>
-
-          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-white/20 text-[22px] text-white md:h-16 md:w-16">
-            →
-          </div>
-        </div>
-      </a>
-    </section>
+    <BaseCard
+      href="/enterprise.html"
+      eyebrow="Cosa Software · Enterprise Systems"
+      title="Enterprise Systems"
+      subtitle="Hardware, software, integration, and decades of support — governed in one continuous system."
+      footer="Development · Integration · Validation · Support"
+    />
   );
 }
 
 function CreativeCard() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-2 md:py-0">      <a
-        href="/#/creative"
-        className="relative block overflow-hidden rounded-[18px] bg-[#141311] no-underline transition-opacity duration-200 hover:opacity-95"
-      >
-<div className="absolute left-5 top-6 bottom-6 w-[6px] rounded-full bg-[#78AAFF]" />
-        <div className="grid items-center gap-4 pl-14 pr-6 py-8 md:grid-cols-[1fr_auto] md:pl-16 md:pr-10 md:py-10">          <div>
-            <div className="mb-5 text-[10px] font-normal uppercase tracking-[0.22em] text-white/35 md:text-[11px]">
-              Cosa Software · Creative Development
-            </div>
-
-            <h2
-              className="mb-5 text-[clamp(32px,4vw,58px)] font-normal leading-[1.02] tracking-[-0.03em] text-white"
-              style={{ fontFamily: "Georgia, serif" }}
-            >
-              Creative Development
-            </h2>
-
-            <p
-              className="mb-7 max-w-[620px] text-[clamp(18px,1.9vw,25px)] font-normal italic leading-[1.5] text-white/60"
-              style={{ fontFamily: "Georgia, serif" }}
-            >
-              Story, scene, wardrobe, and character development — built for teams, inside governed process flow.
-            </p>
-
-            <div className="text-sm tracking-[0.02em] text-white/45">
-              Storyboards · Casting · Scene development · Production flow
-            </div>
-          </div>
-
-          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-white/20 text-[22px] text-white md:h-16 md:w-16">
-            →
-          </div>
-        </div>
-      </a>
-    </section>
+    <BaseCard
+      href="/#/creative"
+      eyebrow="Cosa Software · Creative Development"
+      title="Creative Development"
+      subtitle="Story, scene, wardrobe, and character development — built for teams."
+      footer="Storyboards · Casting · Scene development · Production flow"
+    />
   );
 }
 

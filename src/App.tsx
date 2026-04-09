@@ -114,7 +114,7 @@ function Intro() {
         <div className="mx-auto max-w-6xl">
           <div className="w-full max-w-[1040px] border-t-4 border-blue-500/80 pt-4 lg:border-l-[4px] lg:border-t-0 lg:pl-8 lg:pt-0">
             <p className="text-left text-[1.55rem] leading-[1.18] tracking-[-0.045em] text-neutral-800 sm:text-[2rem] sm:leading-[1.16] md:text-[2.35rem] md:leading-[1.14] lg:text-[3rem] lg:leading-[1.1] xl:text-[3.55rem]">
-              Emergence is a process improvement platform that enables teams to
+              Emergence is a process improvement platform that enables creative teams to
               continuously improve their workflows in real time.
             </p>
 
@@ -283,7 +283,7 @@ function CreativeCard() {
       href="/#/creative"
       eyebrow="Cosa Software · Creative Development"
       title="Creative Development"
-      subtitle="Story, scene, and character development — built for teams."
+      subtitle="World Building - story, scene, and character development — built for creative teams."
       footer="Storyboards · Casting · Scene development · Production flow"
     />
   );
@@ -464,7 +464,7 @@ function HeroCreature() {
               Creative Development
             </p>
             <h1 className="mt-3 max-w-4xl text-4xl font-bold tracking-tight md:text-6xl">
-           Story, scene, and character development — built for teams, inside governed process flow.
+           World Building - story, scene, and character development — built for creative teams, inside governed process flow.
                 </h1>
           </div>
         </div>
@@ -565,8 +565,7 @@ function NarrativeBlock() {
     <p className="text-lg leading-relaxed text-white/70 md:text-xl">
       Consider a technical director overseeing a complex production — writers,
       concept artists, animators, and directors distributed across locations.
-      Storyboards evolve in real time. Scenes, wardrobe, and character
-      development move through governed approval stages.
+      Storyboards evolve in real time and worlds emerge. Stories, scenes, and characters move through governed approval stages.
     </p>
 
     <p className="mt-6 text-lg leading-relaxed text-white/70 md:text-xl">

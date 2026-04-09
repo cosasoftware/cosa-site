@@ -82,6 +82,7 @@ function Header() {
       <div className="text-xl leading-none font-bold tracking-tight text-neutral-600">
         Cosa Software
       </div>
+
     </div>
   </div>
 
@@ -377,19 +378,27 @@ function Footer() {
 
 function CreativeHeader() {
   return (
-<header className="sticky top-0 z-50 bg-neutral-950/85 backdrop-blur supports-[backdrop-filter]:bg-neutral-950/70">
-  <div className="flex h-12 w-full items-center justify-between px-2">
-    <div className="flex items-center gap-2">
-      <img src="/logo/cosa-mark-white.png" alt="Cosa" className="h-9 w-9 " />
-      <div className="text-xl leading-none font-bold tracking-tight  text-white">
-        Cosa Software
+    <header className="sticky top-0 z-50 bg-neutral-950/85 backdrop-blur supports-[backdrop-filter]:bg-neutral-950/70">
+      <div className="flex h-12 w-full items-center justify-between px-4">
+        
+        <div className="flex items-center gap-2">
+          <img src="/logo/cosa-mark-white.png" alt="Cosa" className="h-9 w-9" />
+          <div className="text-xl leading-none font-bold tracking-tight text-white">
+            Cosa Software
+          </div>
+        </div>
+
+        <a
+          href="/creative/LawOffice.mp4"
+          className="text-sm text-white/70 hover:text-white"
+        >
+          Watch Demo
+        </a>
+
       </div>
-    </div>
-  </div>
-</header>
+    </header>
   );
 }
-
 function FadeInSection({
   children,
   className = "",

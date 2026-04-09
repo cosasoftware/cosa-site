@@ -283,7 +283,7 @@ function CreativeCard() {
       href="/#/creative"
       eyebrow="Cosa Software · Creative Development"
       title="Creative Development"
-      subtitle="Story, scene, wardrobe, and character development — built for teams."
+      subtitle="Story, scene, and character development — built for teams."
       footer="Storyboards · Casting · Scene development · Production flow"
     />
   );
@@ -464,7 +464,7 @@ function HeroCreature() {
               Creative Development
             </p>
             <h1 className="mt-3 max-w-4xl text-4xl font-bold tracking-tight md:text-6xl">
-           Story, scene, wardrobe, and character development — built for teams, inside governed process flow.
+           Story, scene, and character development — built for teams, inside governed process flow.
                 </h1>
           </div>
         </div>

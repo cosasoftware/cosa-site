@@ -179,7 +179,7 @@ function VideoFeature() {
             </h2>
 
             <p className="mt-4 text-base leading-relaxed text-neutral-700 md:text-lg">
-             Continuous workflows, real-time evolution, and immediate organizational impact. Across any industry, as well as process process of any complexity.
+             Continuous workflows, real-time evolution, and immediate organizational impact. Across any industry, as well any process with any level of complexity.
             </p>
 
             <div className="mt-6 inline-flex items-center gap-3 text-sm font-medium uppercase tracking-[0.16em] text-neutral-600">

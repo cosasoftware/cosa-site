@@ -171,7 +171,7 @@ function VideoFeature() {
 
           <div className="flex flex-col justify-center border-t border-neutral-200 p-6 md:border-l md:border-t-0 md:p-10">
             <div className="text-[11px] font-semibold uppercase tracking-[0.22em] text-neutral-500 md:text-xs">
-              Latest Demo
+              Product Video
             </div>
 
             <h2 className="mt-3 text-3xl font-semibold tracking-tight text-neutral-950 md:text-5xl">

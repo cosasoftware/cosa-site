@@ -62,6 +62,7 @@ export default function App() {
       <Header />
       <Intro />
       <Banner />
+      <VideoFeature />
       <CoreClaim />
       <SystemStatement />
       <DomainCards />
@@ -139,6 +140,55 @@ function Banner() {
           className="w-full max-h-[560px] object-contain"
         />
       </div>
+    </section>
+  );
+}
+
+
+function VideoFeature() {
+  return (
+    <section className="mx-auto max-w-6xl px-6 pb-6 pt-10 md:pb-8 md:pt-14">
+      <a
+        href="https://youtu.be/DfzSTY00rdY"
+        target="_blank"
+        rel="noreferrer"
+        className="group block overflow-hidden rounded-[24px] border border-neutral-200 bg-white transition hover:border-neutral-300"
+      >
+        <div className="grid items-stretch md:grid-cols-[1.35fr_0.9fr]">
+          <div className="relative overflow-hidden bg-neutral-950">
+            <img
+              src="https://i.ytimg.com/vi/DfzSTY00rdY/maxresdefault.jpg"
+              alt="Emergence product demo video thumbnail"
+              className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.02]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-black/10" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white/92 text-2xl text-neutral-950 shadow-lg transition duration-300 group-hover:scale-105">
+                ▶
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col justify-center border-t border-neutral-200 p-6 md:border-l md:border-t-0 md:p-10">
+            <div className="text-[11px] font-semibold uppercase tracking-[0.22em] text-neutral-500 md:text-xs">
+              Latest Demo
+            </div>
+
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-neutral-950 md:text-5xl">
+              See Emergence in motion.
+            </h2>
+
+            <p className="mt-4 text-base leading-relaxed text-neutral-700 md:text-lg">
+              Emergence in motion — continuous workflows, real-time evolution, and immediate system-wide impact. Across any industry.
+            </p>
+
+            <div className="mt-6 inline-flex items-center gap-3 text-sm font-medium uppercase tracking-[0.16em] text-neutral-600">
+              Watch on YouTube
+              <span aria-hidden="true" className="text-base transition group-hover:translate-x-0.5">→</span>
+            </div>
+          </div>
+        </div>
+      </a>
     </section>
   );
 }
